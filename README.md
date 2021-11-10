@@ -13,19 +13,17 @@ In today’s hectic lifestyle people easily forgets about the most important asp
 To tackle this problem, we offer a system that is focused on homemade food delivery – “The Lunch Box”. The main focus of the idea is to introduce a healthy lifestyle in terms of homemade food service where target audiences could be International Students, Athletes, and Poor People. The people with hectic schedules and old age people could also be a part of the customer segment.  This platform provides options to select the 7 days meal generation from several options considering diet and nutrition with offering food delivery. Apart from that, membership subscriptions – Gold, Silver, Platinum can attract customers by providing offers on weekdays, free delivery, and nutrition advice. One of the major key features of our system is people can include their occupation, disease, diet plans to get the food accordingly. Proper diet and hygienic food can be the first step towards a healthy lifestyle. 
 
 
+
 **Authors:**
 
-Aditya Arora [B00872193]
-
-Deep Patel [B00865413]
-
-Divyansh Vyas [B00870641]
-
-Janvi Patel [B00863421]
-
-Jiyuan Zhang [B00785448]
-
-Preetham Tikkavarapu [B00882398]
+| Student Name:               | Banner ID         |
+|-----------------------------|-------------------|
+| Aditya Arora                | B00872193         |
+| Deep Patel                  | B00865413         |
+| Divyansh Vyas               | B00870641         |
+| Janvi Patel                 | B00863421         |
+| Jiyuan Zhang                | B00785448         |
+| Preetham Tikkavarapu        | B00882398         |
 
 
 Getting Started
