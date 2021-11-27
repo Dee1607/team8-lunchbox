@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import foodYummy from "../assets/FoodYummy.png";
+import lunchbox from "../assets/logo4.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <Nav>
         <div className="brand">
-          <img src={foodYummy} alt="Icon" />
+          <img src={lunchbox} alt="Icon" />
           <div className="toggle">
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
@@ -28,20 +28,23 @@ export default function Navbar() {
         <ul className="links">
           <li>
             <a href="#home" className="active">
-              Home
+            Home
             </a>
           </li>
           <li>
-            <a href="#services">Our Services</a>
+            <a href="#menu">Menu</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#orders">Orders</a>
+          </li>
+          <li>
+            <a href="#mealplanner">Meal Planner</a>
+          </li>
+          <li>
+            <a href="#membership">Membership</a>
           </li>
           <li>
             <a href="#testimonials">Testimonials</a>
-          </li>
-          <li>
-            <a href="#products">Products</a>
           </li>
           <li>
             <a href="#newsletter">Newsletter</a>
@@ -60,23 +63,28 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#services" onClick={() => setNavbarState(false)}>
-              Our Services
+            <a href="#menu" onClick={() => setNavbarState(false)}>
+              Menu
             </a>
           </li>
           <li>
-            <a href="#portfolio" onClick={() => setNavbarState(false)}>
-              Portfolio
+            <a href="#orders" onClick={() => setNavbarState(false)}>
+              Orders
+            </a>
+          </li>
+          <li>
+            <a href="#mealplanner" onClick={() => setNavbarState(false)}>
+            Meal Planner
+            </a>
+          </li>
+          <li>
+            <a href="#membership" onClick={() => setNavbarState(false)}>
+              Membership
             </a>
           </li>
           <li>
             <a href="#testimonials" onClick={() => setNavbarState(false)}>
               Testimonials
-            </a>
-          </li>
-          <li>
-            <a href="#products" onClick={() => setNavbarState(false)}>
-              Products
             </a>
           </li>
           <li>
