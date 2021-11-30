@@ -1,18 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../assets/portfolio.jpg";
+import background from "../assets/Meal-Planning.jpg";
+import MealPlannerOptions from './AddMealPlanner.jsx'
 export default function Portfolio() {
+  const routeChange = () =>{ 
+    let path = MealPlannerOptions; 
+    //history.push(path);
+  }
   return (
     <Section id="portfolio">
       <div className="background">
         <img src={background} alt="" />
       </div>
       <div className="content">
-        <h1>Buy Premium Pan Free Hand Toast!</h1>
-        <h2>
-          Meal Planner!
-        </h2>
-        <button>Buy Now</button>
+        <h1>Plan your meal</h1>
+        <button onClick={routeChange}>
+            Choose
+        </button>
       </div>
     </Section>
   );

@@ -9,23 +9,23 @@ export default function Menu() {
   const data = [
     {
       image: product1,
-      name: "Chicken Burger",
+      name: "chickpeas masala",
       price: "$22.4/pcs",
     },
     {
       image: product2,
-      name: "Toasted Bread",
+      name: "Healthy Salad",
       price: "$5.5/pcs",
     },
     {
       image: product3,
-      name: "Egg Sandwich",
+      name: "Bajri rotla",
       price: "$8/pcs",
     },
 
     {
       image: product4,
-      name: "Raspberry Cake",
+      name: "Frenkie",
       price: "$12.5/pcs",
     },
   ];
@@ -45,7 +45,7 @@ export default function Menu() {
               </div>
               <h2>{product.name}</h2>
               <h3>{product.price}</h3>
-              <p>He Printing and Typesetting the industry. Lorem Ipsum has</p>
+              <p></p>
               <button>Buy Now</button>
             </div>
           );

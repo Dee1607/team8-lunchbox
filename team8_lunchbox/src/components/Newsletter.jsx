@@ -6,17 +6,15 @@ export default function Newsletter() {
     <Section id="newsletter">
       <div className="title">
         <h1>
-          <span>Subscribe</span> Newsletter
+          <span>Chat With US</span> 
         </h1>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid quas
-          perferendis nesciunt illum, voluptas nulla laborum alias similique
-          praesentium quam.
+          Do you have any questions? or Need guidance for ordering?
         </p>
       </div>
       <div className="container">
-        <input type="text" placeholder="Search for food ..." />
-        <button>Search</button>
+        <input type="text" placeholder="Write questions ..." />
+        <button>Ask</button>
       </div>
     </Section>
   );

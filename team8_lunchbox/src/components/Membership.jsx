@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import background from "../assets/portfolio.jpg";
+import background from "../assets/membership.jpg";
 export default function Membership() {
   return (
     <Section id="portfolio">
@@ -8,11 +8,7 @@ export default function Membership() {
         <img src={background} alt="" />
       </div>
       <div className="content">
-        <h1>Buy Premium Pan Free Hand Toast!</h1>
-        <h2>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi,
-          molestias!
-        </h2>
+        <h1>Select Plans!</h1>
         <button>Buy Now</button>
       </div>
     </Section>
@@ -46,8 +42,8 @@ const Section = styled.section`
   }
   .content {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 2%;
+    left: 2%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -56,18 +52,18 @@ const Section = styled.section`
     align-items: flex-start;
     h1 {
       font-size: 3rem;
-      width: 60%;
+      width: 40%;
     }
     h2 {
-      width: 60%;
+      width: 40%;
     }
     button {
       border: none;
-      padding: 1rem 4rem;
-      font-size: 1.4rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
       color: white;
       border-radius: 4rem;
-      transition: 0.5s ease-in-out;
+      transition: 0.2s ease-in-out;
       cursor: pointer;
       background: linear-gradient(to right, #fc4958, #e85d04);
       text-transform: uppercase;
