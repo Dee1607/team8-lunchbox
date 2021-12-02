@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const Orders = () => {
-    return (
-        <div>
-            Hello Orders
-        </div>
-    )
+export default function Orders() {
+  return (
+    <div id="orders">
+      <h1>Order List</h1>
+    </div>
+  );
 }
-
-export default Orders
