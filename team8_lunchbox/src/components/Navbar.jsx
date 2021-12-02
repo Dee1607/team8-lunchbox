@@ -9,6 +9,7 @@ export default function Navbar() {
   html.addEventListener("click", () => setNavbarState(false));
   return (
     <>
+    <section>
       <Nav>
         <div className="brand">
           <img src={lunchbox} alt="Icon" />
@@ -32,6 +33,9 @@ export default function Navbar() {
             </a>
           </li>
           <li>
+            <a href="#login">Login</a>
+          </li>
+          <li>
             <a href="#menu">Menu</a>
           </li>
           <li>
@@ -51,6 +55,8 @@ export default function Navbar() {
           </li>
         </ul>
       </Nav>
+      </section>
+      <section>
       <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
         <ul>
           <li>
@@ -60,6 +66,11 @@ export default function Navbar() {
               onClick={() => setNavbarState(false)}
             >
               Home
+            </a>
+          </li>
+          <li>
+            <a href="#login" onClick={() => setNavbarState(false)}>
+              Login
             </a>
           </li>
           <li>
@@ -94,6 +105,7 @@ export default function Navbar() {
           </li>
         </ul>
       </ResponsiveNav>
+      </section>
     </>
   );
 }
@@ -103,6 +115,10 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 0 4vw;
+  position: fixed;
+  background-color: white;
+  width: -webkit-fill-available;
+  top: 0;
   .brand {
     img {
       margin-top: 1rem;

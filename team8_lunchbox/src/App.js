@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
+import Login from "./components/Login";
 import scrollreveal from "scrollreveal";
 export default function App() {
   useEffect(() => {
@@ -18,40 +19,12 @@ export default function App() {
       duration: 2000,
       reset: false,
     });
-  /*  sr.reveal(
-      `
-        nav,
-        #home,
-        #menu,
-        #orders,
-        #mealplanner,
-        #membership,
-        #testimonials,
-        .footer
-      `,
-      {
-        opacity: 0,
-        interval: 200,
-      }
-    );
-  }, []);
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar />
-      <Home />
-      <Menu />
-      <Orders />
-      <MealPlanner />
-      <Membership />
-      <Testimonials /> 
-      <Footer />
-    </>
-  );*/
+ 
  sr.reveal(      
     `
-    nav, 
+    nav,
     #home,
+    #login, 
     #menu,
     #orders,
     #mealplanner,
@@ -69,6 +42,7 @@ export default function App() {
         <ScrollToTop />
         <Navbar />
         <Home />
+        <Login />
         <Menu />
         <Orders />
         <MealPlanner />
@@ -78,5 +52,4 @@ export default function App() {
         <Footer />    
       </>
     );
-
 }
