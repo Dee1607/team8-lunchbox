@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 // import Image from "react";
 import styled from "styled-components";
 import item1 from "../assets/item1.jpg";
@@ -8,7 +8,6 @@ import item4 from "../assets/item4.jpg";
 import "../css/bootstrap-theme.css";
 import "../css/bootstrap-theme.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import HorizontalGallery from 'react-dynamic-carousel';
 import axios from 'axios';
 
@@ -16,7 +15,6 @@ import axios from 'axios';
 // import "../css/bootstrap.min.css";
 
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
-import { VscGear } from "react-icons/vsc";
 
 export default function Menu() {
   const data = [
@@ -63,6 +61,7 @@ export default function Menu() {
     },
 
   ];
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -81,17 +80,15 @@ export default function Menu() {
     }
   };
 
-  const handleStoreData = (value) => 
+  const handleStoreData = (e) => 
   {
-      console.log(value);
-
-      axios.post("https://nwd4cbq392.execute-api.us-east-1.amazonaws.com/default/LambdaDataHandling",JSON.stringify({data: value})).then((response) => {
+      console.log(e);
+      axios.post("https://nyfqd19bba.execute-api.us-east-1.amazonaws.com/default/LambdaDataEntryHandler",JSON.stringify({table:"CustomerOrder",data: e})).then((response) => {
           console.log("DATA" ,response.data);
           alert.message('Successfully stored data into database');
       }).catch((error) => {
           console.log("Eroor", error)
       })
-
   }
 
   return (
@@ -103,7 +100,6 @@ export default function Menu() {
       </div>
 
     <HorizontalGallery
-        
         tiles={data.map((value) => (
             <div>
                 <div className="items">
@@ -112,7 +108,7 @@ export default function Menu() {
                     <h2>{value.name}</h2>
                     <p>{value.nutricians}</p>
                     <h3>{value.price}</h3>
-                    <button type="submit" onClick={handleStoreData(value)}>Order now</button>
+                    <button type="submit" onClick={() => {handleStoreData(value)}}>Order now</button>
                 </div>
                 </div>
             </div>
