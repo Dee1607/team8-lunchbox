@@ -9,7 +9,8 @@ import "../css/bootstrap-theme.css";
 import "../css/bootstrap-theme.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import HorizontalGallery from 'react-dynamic-carousel'
+import HorizontalGallery from 'react-dynamic-carousel';
+import axios from 'axios';
 
 // import "../css/bootstrap.css";
 // import "../css/bootstrap.min.css";
@@ -80,9 +81,18 @@ export default function Menu() {
     }
   };
 
-//   handlePurchase = () => {
-//     history.push("/testimonials");
-//   }
+  const handleStoreData = (value) => 
+  {
+      console.log(value);
+
+      axios.post("https://nwd4cbq392.execute-api.us-east-1.amazonaws.com/default/LambdaDataHandling",JSON.stringify({data: value})).then((response) => {
+          console.log("DATA" ,response.data);
+          alert.message('Successfully stored data into database');
+      }).catch((error) => {
+          console.log("Eroor", error)
+      })
+
+  }
 
   return (
     <Section id="menu">
@@ -102,7 +112,7 @@ export default function Menu() {
                     <h2>{value.name}</h2>
                     <p>{value.nutricians}</p>
                     <h3>{value.price}</h3>
-                    <button onclick="handlePurchase()">Order now</button>
+                    <button type="submit" onClick={handleStoreData(value)}>Order now</button>
                 </div>
                 </div>
             </div>
