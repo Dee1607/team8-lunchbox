@@ -1,26 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import bronze from "../assets/bronzecard.JPG";
+import gold from "../assets/goldcard.JPG";
+import silver from "../assets/silvercard.JPG";
 
 export default function Membership() {
   const data = [
     {
       id: 1,
-      image: "",
+      image: gold,
       name: "Gold",
       price: "$10.95/pcs",
       details: "Gold Membership Details",
     },
     {
         id: 2,
-        image: "",
+        image: silver,
       name: "Dimond",
       price: "$5.5/pcs",
       details: "Dimond Membership Details",
     },
     {
         id: 3,
-        image: "",
+        image: bronze,
       name: "Platinum",
       price: "$8/pcs",
       details: "Platinum Membership Details",
@@ -57,7 +60,7 @@ export default function Membership() {
           return (
             <div className="item">
               <div className="image">
-                <img src={value.image} alt="" />
+                <img className="image" src={value.image} alt="" />
               </div>
               <h2>{value.name}</h2>
               <h3>{value.price}</h3>
@@ -103,8 +106,8 @@ const Section = styled.section`
         overflow: hidden;
         border-radius: 1rem;
         img {
-          height: 20rem;
-          width: 15rem;
+          height: 30rem;
+          width: 20rem;
           object-fit: cover;
         }
       }
