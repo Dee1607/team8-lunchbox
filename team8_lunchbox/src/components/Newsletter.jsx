@@ -14,7 +14,7 @@ export default function Newsletter() {
       </div>
       <div className="container">
         <input type="text" placeholder="Write questions ..." />
-        <button>Ask</button>
+        <button>Submit</button>
       </div>
     </Section>
   );
