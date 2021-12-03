@@ -1,24 +1,43 @@
+//https://stackoverflow.com/questions/65171081/react-router-dom-not-working-with-link-but-refreshing-the-page-loads-the-compon/65171215
 import React from "react";
 import styled from "styled-components";
 import background from "../assets/Meal-Planning.jpg";
-import MealPlannerOptions from './AddMealPlanner.jsx'
+import { Modal, Form, Button, Alert } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import MealPlannerOptions from './AddMealPlanner.jsx';
+import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom";
+
 export default function Portfolio() {
+
   const routeChange = () =>{ 
-    let path = MealPlannerOptions; 
-    //history.push(path);
+      console.log("in router change");
+      ReactDOM.render(
+        <React.StrictMode>
+            <BrowserRouter>
+                <MealPlannerOptions />
+            </BrowserRouter>
+        </React.StrictMode>,
+        document.getElementById("root")
+    );
   }
+
   return (
+    <div>
     <Section id="portfolio">
+     
       <div className="background">
         <img src={background} alt="" />
       </div>
       <div className="content">
         <h1>Plan your meal</h1>
-        <button onClick={routeChange}>
-            Choose
+        <button title="Choose" onClick={routeChange}>
+              Choose
         </button>
       </div>
     </Section>
+   
+      </div>
   );
 }
 
@@ -96,4 +115,5 @@ const Section = styled.section`
       }
     }
   }
+
 `;

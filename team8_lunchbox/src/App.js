@@ -27,6 +27,7 @@ export default function App() {
         #mealplanner,
         #membership,
         #testimonials,
+        #newsletter,
         .footer
       `,
       {

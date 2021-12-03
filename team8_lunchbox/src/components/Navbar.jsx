@@ -3,9 +3,15 @@ import styled from "styled-components";
 import lunchbox from "../assets/logo4.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+import { Modal } from "react-bootstrap";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
+  const [lgShow, setLgShow] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   html.addEventListener("click", () => setNavbarState(false));
   return (
     <>
@@ -88,10 +94,14 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#newsletter" onClick={() => setNavbarState(false)}>
+            <a href="#newsletter" onClick={() => handleShow()} >
               Newsletter
             </a>
+            
+                      
+
           </li>
+          
         </ul>
       </ResponsiveNav>
     </>
