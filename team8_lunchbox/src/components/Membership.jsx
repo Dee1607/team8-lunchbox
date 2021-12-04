@@ -106,11 +106,11 @@ export default function Membership() {
 const Section = styled.section`
   ${TitleStyles};
   .items {
+    inline-size: 150rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 3rem;
-    margin-left: 20rem;
     .item {
       display: flex;
       flex-direction: column;

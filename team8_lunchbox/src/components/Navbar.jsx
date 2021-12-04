@@ -17,7 +17,7 @@ export default function Navbar() {
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
             ) : (
-              <GiHamburgerMenu
+              <x
                 onClick={(e) => {
                   e.stopPropagation();
                   setNavbarState(true);
@@ -31,9 +31,6 @@ export default function Navbar() {
             <a href="#home" className="active">
             Home
             </a>
-          </li>
-          <li>
-            <a href="#login">Login</a>
           </li>
           <li>
             <a href="#menu">Menu</a>
@@ -66,11 +63,6 @@ export default function Navbar() {
               onClick={() => setNavbarState(false)}
             >
               Home
-            </a>
-          </li>
-          <li>
-            <a href="#login" onClick={() => setNavbarState(false)}>
-              Login
             </a>
           </li>
           <li>
@@ -112,6 +104,7 @@ export default function Navbar() {
 
 const Nav = styled.nav`
   display: flex;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 0 4vw;
