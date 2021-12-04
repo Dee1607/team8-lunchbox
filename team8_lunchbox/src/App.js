@@ -43,6 +43,7 @@ export default function App() {
         <Navbar />
         <Home />
         <Login />
+        
         <Menu />
         <Orders />
         <MealPlanner />

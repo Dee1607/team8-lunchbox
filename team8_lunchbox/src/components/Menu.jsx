@@ -1,5 +1,4 @@
-import React from "react";
-// import Image from "react";
+import {React, useState} from "react";
 import styled from "styled-components";
 import item1 from "../assets/item1.jpg";
 import item2 from "../assets/item2.jpg";
@@ -58,6 +57,7 @@ export default function Menu() {
     },
 
   ];
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -99,7 +99,6 @@ export default function Menu() {
       </div>
 
     <HorizontalGallery
-        
         tiles={data.map((value) => (
             <div>
                 <div className="items">
