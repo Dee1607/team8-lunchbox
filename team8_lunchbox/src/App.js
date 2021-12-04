@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
-import Login from "./components/Login";
 import scrollreveal from "scrollreveal";
 export default function App() {
   useEffect(() => {
@@ -24,7 +23,6 @@ export default function App() {
     `
     nav,
     #home,
-    #login, 
     #menu,
     #orders,
     #mealplanner,
@@ -42,8 +40,6 @@ export default function App() {
         <ScrollToTop />
         <Navbar />
         <Home />
-        <Login />
-        
         <Menu />
         <Orders />
         <MealPlanner />
