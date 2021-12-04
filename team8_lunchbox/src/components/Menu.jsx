@@ -12,13 +12,8 @@ import HorizontalGallery from 'react-dynamic-carousel'
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from 'axios';
 
-
-
 export default function Menu() {
-  
-  
-  
-  
+
   const data = [
     {
       id: 1,
@@ -94,7 +89,6 @@ export default function Menu() {
         })
 
     }
-
 
   return (
     <Section id="menu">
