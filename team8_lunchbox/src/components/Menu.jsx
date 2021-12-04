@@ -120,6 +120,7 @@ export default function Menu() {
 }
 
 const Section = styled.section`
+// padding: 0rem;
   ${TitleStyles};
   .items {
     display: grid;

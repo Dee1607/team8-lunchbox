@@ -1,4 +1,8 @@
 import React from 'react'
+import styled from "styled-components";
+
+import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+
 
 const Membership = () => {
   return (
@@ -7,6 +11,8 @@ const Membership = () => {
     </div>
   )
 }
+
+export default Membership
 
 const Section = styled.section`
   ${TitleStyles};
