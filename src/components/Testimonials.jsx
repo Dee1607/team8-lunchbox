@@ -24,88 +24,104 @@ export default function Testimonials() {
   }, []); 
   
   return (
-    <Section id="products">
-      <div className="title">
-        <h1>
-          <span>Favourite</span> All the time!
-        </h1>
+    <Section id="testimonials">
+      <div className="container">
+        <div className="title">
+          <h1>
+            <span>What</span> Customers Says
+          </h1>
+        </div>
+
+        <div className="items" style={{alignContent: "center"}}>
+        {
+         
+        }
+
       </div>
-      <div className="products">
-        {testimonials.map((product) => {
-          return (
-            <div className="product">
-              <div className="image">
-                <img src={product.URL} alt="" />
-              </div>
-              <h2>{product.id}</h2>
-              <h3>{product.feedback}</h3>
-              <button>Buy Now</button>
-            </div>
-          );
-        })}
+
+        <div className="testimonials">
+          <div className="testimonial"> {
+              testimonials.map((value) => {
+                return (
+                  <div className="item">
+                    <div>
+                      <img className="image" src={value.URL} alt="" />
+                    </div>
+                    <h2>{value.id}</h2>
+                    <p>{value.feedback}</p>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
     </Section>
   );
 }
 
 const Section = styled.section`
-  ${TitleStyles};
-  .products {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    margin-top: 3rem;
-    .product {
+  margin: 5vw;
+  background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);
+  padding: 0.2rem;
+  border-radius: 1.5rem;
+  position: relative;
+  .container {
+    margin: 0.5rem;
+    padding-top: 1vw;
+    padding-bottom: 4vw;
+    background-color: white;
+    border-radius: 1rem;
+    ${TitleStyles};
+    .title {
+      position: absolute;
+      top: -1rem;
+      left: 25%;
+      padding: 0 2rem;
+      background-color: white;
+    }
+    .testimonials {
       display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      h3 {
-        color: #fc4958;
-      }
-      p {
+      gap: 6vw;
+      margin-top: 3vw;
+      .testimonial {
+        padding: 0 4vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        font-size: 1.1rem;
-        line-height: 2rem;
-        letter-spacing: 0.1rem;
-      }
-      ${imageZoomEffect};
-      .image {
-        max-height: 20rem;
-        overflow: hidden;
-        border-radius: 1rem;
-        img {
-          height: 20rem;
-          width: 15rem;
-          object-fit: cover;
+        gap: 1rem;
+        p {
+          font-size: 1.1rem;
+          line-height: 2rem;
+          letter-spacing: 0.1rem;
+          span {
+            color: #fc4958;
+          }
         }
-      }
-      button {
-        border: none;
-        padding: 1rem 4rem;
-        font-size: 1.4rem;
-        color: white;
-        border-radius: 4rem;
-        transition: 0.5s ease-in-out;
-        cursor: pointer;
-        background: linear-gradient(to right, #fc4958, #e85d04);
-        text-transform: uppercase;
-        &:hover {
-          background: linear-gradient(to right, #e85d04, #fc4958);
+        ${imageZoomEffect};
+        .image {
+          overflow: hidden;
+          width: max-content;
+          max-height: 10rem;
+          border-radius: 10rem;
+          img {
+            height: 10rem;
+          }
         }
       }
     }
   }
-
-  @media screen and (min-width: 280px) and (max-width: 720px) {
-    .products {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
-  }
-  @media screen and (min-width: 720px) and (max-width: 1080px) {
-    .products {
-      grid-template-columns: repeat(2, 1fr);
+  @media screen and (min-width: 260px) and (max-width: 1080px) {
+    .container {
+      .title {
+        position: initial;
+        background-color: transparent;
+      }
+      .testimonials {
+        flex-direction: column;
+      }
     }
   }
 `;
