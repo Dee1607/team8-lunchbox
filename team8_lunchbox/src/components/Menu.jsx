@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React} from "react";
 import styled from "styled-components";
 import item1 from "../assets/item1.jpg";
 import item2 from "../assets/item2.jpg";
@@ -10,9 +10,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import HorizontalGallery from 'react-dynamic-carousel'
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from 'axios';
+import {useEffect,useState}  from "react";
+
 
 export default function Menu() {
 
+  const [qty, setQty] = useState( '' );
   const data = [
     {
       id: 1,
@@ -76,12 +79,26 @@ export default function Menu() {
     }
   };
 
-  const handleStoreData =  (event) => 
+  const [orders, setorders] = useState([]);
+  
+  useEffect ( async() => 
+  {
+      const data = await
+      axios.post("https://u4roty5d36.execute-api.us-east-1.amazonaws.com/default/LambdaMenuItems",JSON.stringify({data: "0"}))
+        .then((response) => {
+          console.log(response.data);
+          setorders(response.data);
+      }).catch((error) => {
+          console.log("Eroor")
+      })
+  }, []); 
+
+  const handleStoreData =  (value,qty) => 
     {
        // event.preventDefault();
         console.log("DATA");
 
-        axios.post("https://nwd4cbq392.execute-api.us-east-1.amazonaws.com/default/LambdaDataHandling",JSON.stringify({data: 'CustomerOrder'})).then((response) => {
+        axios.post("https://sv4s5x7dlb.execute-api.us-east-1.amazonaws.com/default/LambdaOrders",JSON.stringify({data: value, qty: qty, customerid: 0})).then((response) => {
             console.log("DATA" ,response.data);
             alert.message('Successfully stored data into database');
         }).catch((error) => {
@@ -99,15 +116,16 @@ export default function Menu() {
       </div>
 
     <HorizontalGallery
-        tiles={data.map((value) => (
+        tiles={orders.map((value) => (
             <div>
                 <div className="items">
                 <div className="item">
-                    <img className="image" src = {value.image} alt=""></img>
+                    <img className="image" src = {value.URL} alt=""></img>
                     <h2>{value.name}</h2>
-                    <p>{value.nutricians}</p>
-                    <h3>{value.price}</h3>
-                    <button onclick={handleStoreData()}>Order now</button>
+                    <p>{value.nutrition}</p>
+                    <h3>${value.price}/pcs</h3>
+                    <lable>Quantity: </lable><input type="text" value={qty} onChange={e => setQty(e.target.value)} ></input>
+                    <button onClick = {() => {handleStoreData(value,qty)}}>Buy Now</button>
                 </div>
                 </div>
             </div>
