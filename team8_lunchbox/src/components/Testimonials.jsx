@@ -2,7 +2,27 @@ import React from "react";
 import styled from "styled-components";
 import avatar1 from "../assets/avatar1.jpg";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import axios from "axios";
+import {useEffect,useState}  from "react";
+
 export default function Testimonials() {
+  
+  const [testimonials, settestimonials] = useState([]);
+  
+  useEffect ( async() => 
+  {
+      const data = await
+      axios.post("https://wqw4fz1nqd.execute-api.us-east-1.amazonaws.com/default/LambdaTestimonials",JSON.stringify({data: 'testimonials'}))
+        .then((response) => {
+          console.log(response.data);
+          settestimonials(response.data);
+          console.log("testimonials");
+          console.log(testimonials);
+      }).catch((error) => {
+          console.log("Eroor")
+      })
+  }, []); 
+  
   return (
     <Section id="testimonials">
       <div className="container">
@@ -11,31 +31,27 @@ export default function Testimonials() {
             <span>What</span> Customers Says
           </h1>
         </div>
+
+        <div className="items" style={{alignContent: "center"}}>
+        {
+         
+        }
+
+      </div>
+
         <div className="testimonials">
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
-            </div>
-            <p>
-              Best quality food for good diet and health.
-            </p>
-          </div>
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
-            </div>
-            <p>
-              Food full of Nutritions and Taste.
-            </p>
-          </div>
-          <div className="testimonial">
-            <div className="image">
-              <img src={avatar1} alt="" />
-            </div>
-            <p>
-              I like the salad here which is really 
-              good in terms of taste and diet.
-            </p>
+          <div className="testimonial"> {
+              testimonials.map((value) => {
+                return (
+                  <div className="item">
+                    <div>
+                      <img className="image" src={value.URL} alt="" />
+                    </div>
+                    <h2>{value.id}</h2>
+                    <p>{value.feedback}</p>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
