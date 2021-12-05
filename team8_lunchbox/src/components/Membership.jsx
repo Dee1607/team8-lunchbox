@@ -73,6 +73,11 @@ export default function Membership() {
   return (
 
     <Section>
+      <div className="title">
+        <h1>
+          <span>Membership</span>
+        </h1>
+      </div>
       <div className="items" style={{alignContent: "center"}}>
         {
           membershipDetails.map((value) => {
