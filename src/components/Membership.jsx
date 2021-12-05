@@ -72,7 +72,13 @@ export default function Membership() {
   }
   return (
 
-    <Section>
+    <Section id = "membership">
+      <div className="container">
+        <div className="title">
+          <h1>
+            <span>Membership</span> Plans
+          </h1>
+      </div>
       <div className="items" style={{alignContent: "center"}}>
         {
           membershipDetails.map((value) => {
@@ -91,6 +97,7 @@ export default function Membership() {
             );
           })
         }
+      </div>
       </div>
     </Section>
   );
