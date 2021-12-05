@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Menu from './components/Menu';
 import Orders from './components/Orders';
+import LexChat from "react-lex-plus";
+import AWS from "aws-sdk";
 import MealPlanner from './components/MealPlanner';
 import Membership from './components/Membership';
 import Navbar from "./components/Navbar";
@@ -21,6 +23,7 @@ export default function App() {
  
  sr.reveal(      
     `
+    /,
     nav,
     #home,
     #menu,
@@ -35,6 +38,14 @@ export default function App() {
         opacity: 0,
        interval: 200,      
     }    );  }, []); 
+
+    AWS.config.update ({
+      region: "us-west-2",
+      credentials: new AWS.CognitoIdentityCredentials({
+      IdentityPoolId: "us-east-1:8810824d-1965-4214-9265-adc5696ef478"
+      })
+    });
+
     return (    
       <>
         <ScrollToTop />
@@ -46,7 +57,18 @@ export default function App() {
         <Membership />
         <Testimonials />
         <Newsletter />
-        <Footer />    
+        <Footer />
+        <LexChat
+        botName="Pizza"
+        IdentityPoolId="us-east-1:8810824d-1965-4214-9265-adc5696ef478"
+        placeholder="Type your query"
+        style={{ position: "absolute" }}
+        backgroundColor="#f5bfbf"
+        height="430px"
+        region="us-east-1"
+        headerText="Feedback"
+        headerStyle={{ backgroundColor: "#ABD5D9", fontSize: "10px" }}
+      />    
       </>
     );
 }
