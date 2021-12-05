@@ -23,7 +23,6 @@ export default function App() {
  
  sr.reveal(      
     `
-    /,
     nav,
     #home,
     #menu,
