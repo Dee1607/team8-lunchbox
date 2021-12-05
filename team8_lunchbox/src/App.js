@@ -18,40 +18,10 @@ export default function App() {
       duration: 2000,
       reset: false,
     });
-  /*  sr.reveal(
-      `
-        nav,
-        #home,
-        #menu,
-        #orders,
-        #mealplanner,
-        #membership,
-        #testimonials,
-        #newsletter,
-        .footer
-      `,
-      {
-        opacity: 0,
-        interval: 200,
-      }
-    );
-  }, []);
-  return (
-    <>
-      <ScrollToTop />
-      <Navbar />
-      <Home />
-      <Menu />
-      <Orders />
-      <MealPlanner />
-      <Membership />
-      <Testimonials /> 
-      <Footer />
-    </>
-  );*/
+ 
  sr.reveal(      
     `
-    nav, 
+    nav,
     #home,
     #menu,
     #orders,
@@ -79,5 +49,4 @@ export default function App() {
         <Footer />    
       </>
     );
-
 }

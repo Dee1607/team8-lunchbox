@@ -1,19 +1,95 @@
 import React from "react";
+import Deep from "../assets/avatar1.jpg"
 import styled from "styled-components";
-import logo from "../assets/FoodYummy.png";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+
+
 export default function Footer() {
+
+  const data = [
+    {
+      id: 1,
+      image: Deep,
+      name: "Deep Patel",
+    },
+    {
+      id: 2,
+      image: Deep,
+      name: "Janvi Patel",
+    },
+    {
+      id: 3,
+      image: Deep,
+      name: "Adity Arora",
+    },
+    {
+      id: 4,
+      image: Deep,
+      name: "Divyansh Vyas",
+    },
+  ];
+
   return (
     <div className="footer">
       <Section>
-        <div className="brand container">
-          <img src={logo} alt="" />
+        
+        <div className="about container">
+          <div className="title">
+            <h3>About Us</h3>
+          </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis,
-            repudiandae.
+            We provide the test of home on your doorsteps.
+            To contact us reach out to us through our online 
+            plateforms through Twiter, Facebook, and Whatsapp
+          </p>
+        </div>
+
+        <div className="contact container">
+          <div className="title">
+            <h3>Contact Us</h3>
+          </div>
+          <p>+1 (902)-412-8167</p>
+          <p>lunchboxteam@gmail.com</p>
+          <p>@theLunchbox</p>
+          <p>1991 Brunswick Street, Halifax, NS, Canada</p>
+        </div>
+
+        <div style={{textAlign: "center", align:"center"}}>
+          <div className="title">
+            <h1>Team Members</h1>
+          </div>
+          <MDBContainer>
+        <MDBRow>
+          <MDBCol md="6">
+            <ul>
+          {data.map((value) => (
+            <div>
+              <li>
+                <div className="items">
+                <div className="item">
+                    <img className="image" src = {value.image} alt=""></img>
+                </div>
+                </div>
+                </li>
+                <p>{value.name}</p>
+            </div>
+          ))}
+          </ul>
+          </MDBCol>
+        </MDBRow>
+      </MDBContainer>
+
+        </div>
+
+        <div className="brand container">
+          <p>
+            Contact us and reach out to us through our online 
+            plateforms of Instagram, Facebook, LinkedIn and Twiter.
           </p>
           <ul>
             <li>
@@ -30,29 +106,10 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="about container">
-          <div className="title">
-            <h3>About Us</h3>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
-            eligendi repellat laudantium blanditiis iure nulla, ut aliquam
-            itaque unde nesciunt cum veritatis perferendis vel expedita! Nam
-          </p>
-        </div>
-        <div className="contact container">
-          <div className="title">
-            <h3>Contact Us</h3>
-          </div>
-          <p>+91 1231231231</p>
-          <p>foodyummy@gmail.com</p>
-          <p>@foodyummy</p>
-          <p>412 Street, Ground Floor, India</p>
-        </div>
       </Section>
       <LowerFooter className="lower__footer">
         <h2>
-          Copyright &copy; 2021 <span>Food Yummy</span>
+          Copyright &copy; 2021 <span>The Lunchbox</span>
         </h2>
       </LowerFooter>
     </div>
@@ -64,9 +121,11 @@ const Section = styled.footer`
   background: linear-gradient(to right, #fc4958, #e85d04);
   color: white;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10vw;
   padding: 4vw;
+  row-gap: 5vw;
+  column-gap: 27rem;
   p {
     font-size: 1.1rem;
     line-height: 2rem;
@@ -78,8 +137,8 @@ const Section = styled.footer`
     gap: 4vw;
     margin-top: 2vw;
     li {
-      padding: 0.8rem;
-      border-radius: 2rem;
+      padding: 1rem;
+      border-radius: 1rem;
       background-color: white;
       transition: 0.3s ease-in-out;
       cursor: pointer;
@@ -101,15 +160,25 @@ const Section = styled.footer`
       }
     }
   }
-  img {
-    filter: brightness(0) invert(1);
-    width: 10vw;
+  ${imageZoomEffect};
+  .image {
+    max-height: 15rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    img {
+      height: 15rem;
+      width: 10rem;
+      object-fit: cover;
+    }
   }
   .container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     h3 {
+      text-align: center;
+
       font-size: 2rem;
     }
   }
@@ -144,3 +213,4 @@ const LowerFooter = styled.div`
     }
   }
 `;
+

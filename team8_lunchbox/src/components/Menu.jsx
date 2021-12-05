@@ -1,73 +1,140 @@
-import React from "react";
+import {React, useState} from "react";
 import styled from "styled-components";
-import product1 from "../assets/product1.jpg";
-import product2 from "../assets/product2.jpg";
-import product3 from "../assets/product3.jpg";
-import product4 from "../assets/product4.jpg";
+import item1 from "../assets/item1.jpg";
+import item2 from "../assets/item2.jpg";
+import item3 from "../assets/item3.jpg";
+import item4 from "../assets/item4.jpg";
+import "../css/bootstrap-theme.css";
+import "../css/bootstrap-theme.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import HorizontalGallery from 'react-dynamic-carousel'
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import axios from 'axios';
+
 export default function Menu() {
+
   const data = [
     {
-      image: product1,
-      name: "chickpeas masala",
-      price: "$22.4/pcs",
+      id: 1,
+      image: item1,
+      name: "Chickpea Sandwich",
+      type: "veg",
+      price: "$10.95/pcs",
+      nutricians: "cal: 24\nfiber:12\nfat:10",
     },
     {
-      image: product2,
-      name: "Healthy Salad",
+        id: 2,
+      image: item2,
+      type: "non-veg",
+      name: "Chicken Salad",
       price: "$5.5/pcs",
+      nutricians: "cal: 24\nfiber:12\nfat:10",
     },
     {
-      image: product3,
-      name: "Bajri rotla",
+        id: 3,
+      image: item3,
+      name: "Turkey Sandwich",
+      type: "non-veg",
       price: "$8/pcs",
+      nutricians: "cal: 24\nfiber:12\nfat:10",
     },
 
     {
-      image: product4,
-      name: "Frenkie",
-      price: "$12.5/pcs",
+        id: 4,
+      image: item4,
+      type: "veg",
+      name: "Mediterranean Salad",
+      price: "$8.5/pcs",
+      nutricians: "cal: 24\nfiber:12\nfat:10",
     },
+    {
+        id: 4,
+      image: item4,
+      name: "Mediterranean Salad",
+      type: "veg",
+      price: "$8.5/pcs",
+      nutricians: "cal: 24\nfiber:12\nfat:10",
+    },
+
   ];
+
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      paritialVisibilityGutter: 60
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      paritialVisibilityGutter: 50
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      paritialVisibilityGutter: 30
+    }
+  };
+
+  const handleStoreData =  (event) => 
+    {
+       // event.preventDefault();
+        console.log("DATA");
+
+        axios.post("https://nwd4cbq392.execute-api.us-east-1.amazonaws.com/default/LambdaDataHandling",JSON.stringify({data: 'CustomerOrder'})).then((response) => {
+            console.log("DATA" ,response.data);
+            alert.message('Successfully stored data into database');
+        }).catch((error) => {
+            console.log("Eroor")
+        })
+
+    }
+
   return (
-    <Section id="products">
+    <Section id="menu">
       <div className="title">
         <h1>
-          <span>Favourite</span> All the time!
+          <span>Today's</span> Menu
         </h1>
       </div>
-      <div className="products">
-        {data.map((product) => {
-          return (
-            <div className="product">
-              <div className="image">
-                <img src={product.image} alt="" />
-              </div>
-              <h2>{product.name}</h2>
-              <h3>{product.price}</h3>
-              <p></p>
-              <button>Buy Now</button>
+
+    <HorizontalGallery
+        tiles={data.map((value) => (
+            <div>
+                <div className="items">
+                <div className="item">
+                    <img className="image" src = {value.image} alt=""></img>
+                    <h2>{value.name}</h2>
+                    <p>{value.nutricians}</p>
+                    <h3>{value.price}</h3>
+                    <button onclick={handleStoreData()}>Order now</button>
+                </div>
+                </div>
             </div>
-          );
-        })}
-      </div>
+        ))}
+        elementWidth={230}
+        minPadding={200}
+    />
     </Section>
   );
 }
 
 const Section = styled.section`
+// padding: 0rem;
   ${TitleStyles};
-  .products {
+  .items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 3rem;
-    .product {
+    .item {
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
       justify-content: center;
       align-items: center;
+      width: max-content;
+      height: max-content;
       h3 {
         color: #fc4958;
       }
@@ -106,13 +173,17 @@ const Section = styled.section`
   }
 
   @media screen and (min-width: 280px) and (max-width: 720px) {
-    .products {
+    .items {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
   @media screen and (min-width: 720px) and (max-width: 1080px) {
-    .products {
+    .items {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 `;
+
+// References:
+// 1. https://www.npmjs.com/package/react-responsive-carousel
+// 2. 

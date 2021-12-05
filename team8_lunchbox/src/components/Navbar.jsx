@@ -15,6 +15,7 @@ export default function Navbar() {
   html.addEventListener("click", () => setNavbarState(false));
   return (
     <>
+    <section>
       <Nav>
         <div className="brand">
           <img src={lunchbox} alt="Icon" />
@@ -22,7 +23,7 @@ export default function Navbar() {
             {navbarState ? (
               <VscChromeClose onClick={() => setNavbarState(false)} />
             ) : (
-              <GiHamburgerMenu
+              <x
                 onClick={(e) => {
                   e.stopPropagation();
                   setNavbarState(true);
@@ -57,6 +58,8 @@ export default function Navbar() {
           </li>
         </ul>
       </Nav>
+      </section>
+      <section>
       <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
         <ul>
           <li>
@@ -104,15 +107,21 @@ export default function Navbar() {
           
         </ul>
       </ResponsiveNav>
+      </section>
     </>
   );
 }
 
 const Nav = styled.nav`
   display: flex;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 0 4vw;
+  position: fixed;
+  background-color: white;
+  width: -webkit-fill-available;
+  top: 0;
   .brand {
     img {
       margin-top: 1rem;
