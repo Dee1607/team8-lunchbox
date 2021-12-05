@@ -24,49 +24,43 @@ export default function Testimonials() {
   }, []); 
   
   return (
-    <Section id="testimonials">
-      <div className="container">
-        <div className="title">
-          <h1>
-            <span>What</span> Customers Says
-          </h1>
-        </div>
-        <div className="testimonials">
-          <div className="testimonial"> {
-              testimonials.map((value) => {
-                return (
-                  <div className="item">
-                    <div>
-                      <img className="image" src={value.URL} alt="" />
-                    </div>
-                    <h2>{value.id}</h2>
-                    <p>{value.feedback}</p>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+    <Section id="products">
+      <div className="title">
+        <h1>
+          <span>Favourite</span> All the time!
+        </h1>
+      </div>
+      <div className="products">
+        {testimonials.map((product) => {
+          return (
+            <div className="product">
+              <div className="image">
+                <img src={product.URL} alt="" />
+              </div>
+              <h2>{product.id}</h2>
+              <h3>{product.feedback}</h3>
+              <button>Buy Now</button>
+            </div>
+          );
+        })}
       </div>
     </Section>
   );
 }
 
 const Section = styled.section`
-// padding: 0rem;
   ${TitleStyles};
-  .items {
+  .products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
     margin-top: 3rem;
-    .item {
+    .product {
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
       justify-content: center;
       align-items: center;
-      width: max-content;
-      height: max-content;
       h3 {
         color: #fc4958;
       }
@@ -105,12 +99,12 @@ const Section = styled.section`
   }
 
   @media screen and (min-width: 280px) and (max-width: 720px) {
-    .items {
+    .products {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
   @media screen and (min-width: 720px) and (max-width: 1080px) {
-    .items {
+    .products {
       grid-template-columns: repeat(2, 1fr);
     }
   }
