@@ -8,7 +8,7 @@ import AWS from "aws-sdk";
 import MealPlanner from './components/MealPlanner';
 import Membership from './components/Membership';
 import Navbar from "./components/Navbar";
-import Newsletter from "./components/Newsletter";
+import Feedback from "./components/Feedback";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
@@ -30,7 +30,7 @@ export default function App() {
     #mealplanner,
     #membership,
     #testimonials,
-    #newsletter,
+    #feedback,
     .footer
     `,
      { 
@@ -55,7 +55,7 @@ export default function App() {
         <MealPlanner />
         <Membership />
         <Testimonials />
-        <Newsletter />
+        <Feedback />
         <Footer />
         <LexChat
         botName="Pizza"

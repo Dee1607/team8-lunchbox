@@ -48,7 +48,7 @@ export default function Navbar() {
             <a href="#testimonials">Testimonials</a>
           </li>
           <li>
-            <a href="#newsletter">Newsletter</a>
+            <a href="#feedback">Feedback</a>
           </li>
         </ul>
       </Nav>
@@ -91,8 +91,8 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#newsletter" onClick={() => setNavbarState(false)}>
-              Newsletter
+            <a href="#feedback" onClick={() => setNavbarState(false)}>
+              Feedback
             </a>
           </li>
         </ul>
