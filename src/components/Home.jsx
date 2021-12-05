@@ -41,7 +41,7 @@ export default function Home() {
 }
 
 const Section = styled.section`
-padding: 10rem;
+padding: 5rem;
   margin: 2rem 4rem;
   ${TitleStyles};
   .home {

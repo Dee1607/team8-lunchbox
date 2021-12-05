@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import bronze from "../assets/bronzecard.JPG";
@@ -71,13 +71,8 @@ export default function Membership() {
       })
   }
   return (
-  <Section id="menu">
-    <div className="title">
-      <h1>
-        <span>Memberships</span>
-      </h1>
-    </div>
-          <div>
+
+    <Section>
       <div className="items" style={{alignContent: "center"}}>
         {
           membershipDetails.map((value) => {
@@ -96,10 +91,8 @@ export default function Membership() {
             );
           })
         }
-
       </div>
-          </div>
-  </Section>
+    </Section>
   );
 }
 

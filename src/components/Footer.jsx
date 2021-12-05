@@ -124,6 +124,8 @@ const Section = styled.footer`
   grid-template-columns: repeat(2, 1fr);
   gap: 10vw;
   padding: 4vw;
+  row-gap: 5vw;
+  column-gap: 27rem;
   p {
     font-size: 1.1rem;
     line-height: 2rem;
@@ -170,6 +172,7 @@ const Section = styled.footer`
     }
   }
   .container {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
