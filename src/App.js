@@ -58,7 +58,7 @@ export default function App() {
         <Feedback />
         <Footer />
         <LexChat
-        botName="Pizza"
+        botName="feedback"
         IdentityPoolId="us-east-1:8810824d-1965-4214-9265-adc5696ef478"
         placeholder="Type your query"
         style={{ position: "absolute" }}
