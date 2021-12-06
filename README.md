@@ -71,6 +71,8 @@ React Table - Lightweight and extensible data tables for React.
 
 React Horizontal Gallery - Horizontal Carousal needs to be installed 
 
+**Deployment**
+Deployment Link: https://myfoodieapp.auth.us-east-1.amazoncognito.com/login?client_id=2d334oi6mum4onrasl6k64tauq&response_type=code&scope=email+openid+profile&redirect_uri=https://lunchbox-team8.herokuapp.com/
 
 **References Used**
 
