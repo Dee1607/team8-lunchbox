@@ -1,3 +1,6 @@
+//Author: Janvi Patel
+//Description: To get feedback from users and store to the database for showcasing testimonials afterwards
+
 import React from "react";
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";

@@ -1,3 +1,5 @@
+//Authors: Janvi Patel, Preetham Tikkavarapu
+
 import React, { useEffect } from "react";
 import Footer from "./components/Footer";
 import Home from "./components/Home";

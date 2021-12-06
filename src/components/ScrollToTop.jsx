@@ -1,6 +1,11 @@
+//Author: Janvi Patel
+//Description: To get feedback from users and store to the database for showcasing testimonials afterwards
+
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AiOutlineArrowUp } from "react-icons/ai";
+
+//To scroll top button at the end of the webpage
 export default function ScrollToTop() {
   const [scrollState, setScrollState] = useState(false);
   const toTop = () => {
@@ -16,6 +21,7 @@ export default function ScrollToTop() {
   );
 }
 
+//styling for the scroll to top section
 const ToTop = styled.div`
   display: ${({ scrollState }) => (scrollState ? "block" : "none")};
   position: fixed;

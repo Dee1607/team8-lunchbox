@@ -1,5 +1,9 @@
+//Author: Deep Patel
+//Description: To setup about us page
+
 import React from "react";
 import Deep from "../assets/avatar1.jpg"
+import Janvi from "../assets/avatar2.jpg"
 import styled from "styled-components";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
@@ -8,6 +12,7 @@ import { GrLinkedinOption } from "react-icons/gr";
 import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import { imageZoomEffect } from "./ReusableStyles";
 
+//Footer contains business 
 export default function Footer() {
 
   const data = [
@@ -19,7 +24,7 @@ export default function Footer() {
     },
     {
       id: 2,
-      image: Deep,
+      image: Janvi,
       firstname: "Janvi",
       lastname: "Patel",    },
     {
@@ -42,6 +47,7 @@ export default function Footer() {
     },
   ];
 
+  //This section contains about us page design and contact information
   return (
     <div className="footer">
       <Section>
@@ -133,6 +139,7 @@ export default function Footer() {
   );
 }
 
+//Styling for the about us page section
 const Section = styled.footer`
   margin: 0;
   background: linear-gradient(to right, #fc4958, #e85d04);

@@ -1,3 +1,6 @@
+//Author: Deep Patel
+//Description: Menu to select dish, know about description, nutrition, pricing
+
 import {React} from "react";
 import styled from "styled-components";
 import HorizontalGallery from 'react-dynamic-carousel'
@@ -5,11 +8,13 @@ import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from 'axios';
 import {useEffect,useState}  from "react";
 
+//Description: This function fetch the menu items from AWS, store the order data to AWS when user choose the dish 
 export default function Menu() {
 
-  const [qty, setQty] = useState( '' );
-  const [orders, setorders] = useState([]);
+  const [qty, setQty] = useState( '' );   //for user input quantity and setup the value for the quantity
+  const [orders, setorders] = useState([]);   //to setup orders
   
+  //to fetch menu items when the page is loaded
   useEffect ( () => {
       axios.post("https://u4roty5d36.execute-api.us-east-1.amazonaws.com/default/LambdaMenuItems",JSON.stringify({data: "0"}))
         .then((response) => {
@@ -19,18 +24,14 @@ export default function Menu() {
       })
   }, []); 
 
+  //to store the data to order table
   const handleStoreData =  (value,qty) => 
-    {
-       // event.preventDefault();
-        console.log("DATA");
-
+  {
         axios.post("https://sv4s5x7dlb.execute-api.us-east-1.amazonaws.com/default/LambdaOrders",JSON.stringify({data: value, qty: qty, customerid: 0})).then((response) => {
-            console.log("DATA" ,response.data);
         }).catch((error) => {
             console.log("Eroor",error)
         })
-
-    }
+  }
 
   return (
     <Section id="menu">
@@ -64,7 +65,7 @@ export default function Menu() {
     </Section>
   );
 }
-
+//style for the menu section
 const Section = styled.section`
 margin: 5vw;
 background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);

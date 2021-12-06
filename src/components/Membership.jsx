@@ -1,13 +1,19 @@
+//Author: Janvi Patel
+//Description: Membership offered to user gold, silver, bronze
+
 import React from 'react'
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from "axios";
 import {useEffect,useState}  from "react";
 
+//Several discount offers, buy one get one, free delivery and pricing options are provided
+//This function performs two tasks 1. to fetch membership information and 2. to store membership information for a particular customer
 export default function Membership() {
 
-  const [membershipDetails, setMembershipDetails] = useState([]);
+  const [membershipDetails, setMembershipDetails] = useState([]);   //set value to pass the membership plan chosen by user
   
+  //useEffect to run this section when page loading is being processed
   useEffect ( () => {
       axios.post("https://hlyq9ayun6.execute-api.us-east-1.amazonaws.com/default/LamdaMembership",JSON.stringify({data: 'membership'}))
         .then((response) => {
@@ -17,6 +23,7 @@ export default function Membership() {
       })
   }, []); 
 
+  //To store membership details for the particular user
   const handleStoreData =  (event) => {
       axios.post("https://bzs3fsb316.execute-api.us-east-1.amazonaws.com/default/LambdaCustomerMembership",JSON.stringify({data: event})).then((response) => {
           alert.message('Successfully stored data into database');
@@ -24,8 +31,9 @@ export default function Membership() {
           console.log("Eroor",error)
       })
   }
-  return (
 
+  //UI design for the membership section that provides 3 options, information and selection choice
+  return (
     <Section id = "membership">
       <div className="container">
         <div className="title">
@@ -57,6 +65,7 @@ export default function Membership() {
   );
 }
 
+//styling for the membership page
 const Section = styled.section`
   ${TitleStyles};
   margin: 5vw;

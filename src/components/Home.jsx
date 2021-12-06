@@ -1,9 +1,14 @@
+//Author: Deep Patel
+//Description: To setup home page which describe about business idea
+
 import React from "react";
 import styled from "styled-components";
 import home1 from "../assets/Services1.png";
 import home2 from "../assets/Services2.png";
 import home3 from "../assets/Services3.png";
 import { TitleStyles } from "./ReusableStyles";
+
+//The main 3 focus of our website is designed into below section
 export default function Home() {
   return (
     <Section id="home">
@@ -42,6 +47,7 @@ export default function Home() {
   );
 }
 
+//styling component for the home feature section
 const Section = styled.section`
 padding: 5rem;
   margin: 2rem 4rem;

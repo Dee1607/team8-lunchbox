@@ -1,18 +1,27 @@
+//Author: Deep Patel
+//Description: To get feedback from users and store to the database for showcasing testimonials afterwards
+
 import React from "react";
 import {useEffect,useState}  from "react";
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from 'axios';
 
+//to fetch the orders for the particular customer
 export default function Orders() {
 
+  //to store quantity, cost, item name and total amount of a particular bill
   const [qty, setqty] = useState([]);
   const [cost, setcost] = useState([]);
   const [name, setName] = useState([]); 
   const [total, setTotal] = useState([]); 
+
+  //API call when the page is loaded
   useEffect ( () => {
       axios.post("https://f3q5gfquml.execute-api.us-east-1.amazonaws.com/default/LambdaOrderRetrive",JSON.stringify({data: "0"}))
         .then((response) => {
+
+          //Regex matching to fetch the pricing from the string
           var qtytxt = response.data[0].qty;
           var qtynum = qtytxt.match(/\d/g);
           setqty(qtynum);
@@ -31,6 +40,7 @@ export default function Orders() {
 
   const [visibilityStatus,setVisibilityStatus] = useState("");
 
+  //status is displayed when the payment is successfully done
   const paymentHandler = () => {
     setVisibilityStatus("Order is placed. Estimated Delivery in 20 minutes." );
   }
@@ -66,17 +76,15 @@ export default function Orders() {
           <p>Total: {total}</p> 
           <button className="button" onClick={() => {paymentHandler()}}>Pay</button>
           <p style={{backgroundColor:"#cbffc0"}}>{visibilityStatus}</p>
-
           </div>
         </div>
       </div>
-
-
     </div>
     </Section> 
   );
 }
 
+//styling for order page
 const Section = styled.section`
 margin: 5vw;
 background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);

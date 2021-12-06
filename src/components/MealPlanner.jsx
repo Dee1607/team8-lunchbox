@@ -1,15 +1,24 @@
+//Author: Janvi Patel
+//Description: To plan the meal for 7 days
+
 import React from "react";
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import {useState}  from "react";
 
+//Options: 1. Based on calories
+//  2. chef's special
+//  3. Choose from menu
 export default function MealPlanner() {
 
-  const [visibilityStatus,setVisibilityStatus] = useState("");
+  const [visibilityStatus,setVisibilityStatus] = useState("");    //visibility message setup for the successful meal planning message
 
+  //Payment handler indicate if the successful payment then the success message
   const paymentHandler = () => {
     setVisibilityStatus("Order is placed. Estimated Delivery in 20 minutes." );
   }
+
+  //UI design for creating the table to showcase 7 day meal
   return (
     <Section id="orders">
     <div className="container">
@@ -80,6 +89,7 @@ export default function MealPlanner() {
   );
 }
 
+//Styling for the meal planner section
 const Section = styled.section`
 margin: 5vw;
 background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);

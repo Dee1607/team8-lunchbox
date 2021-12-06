@@ -22,11 +22,64 @@ To tackle this problem, we offer a system that is focused on homemade food deliv
 | Deep Patel                  | B00865413         |
 | Divyansh Vyas               | B00870641         |
 | Janvi Patel                 | B00863421         |
-| Jiyuan Zhang                | B00785448         |
 | Preetham Tikkavarapu        | B00882398         |
 
+**Contribution:**
 
-Getting Started
+| Student Name:               | Feature 1         |     Feature 2       |        Feature 3      |       Feature 4       |
+|-----------------------------|-------------------|---------------------|-----------------------|-----------------------|
+| Deep Patel                  |  Menu             |     Order Cart      |           Home        |       About Us        |
+| Janvi Patel                 | Membership        |     Feedback        |       Testimonials    |     Meal Planner      |
+| Preetham Tikkavarapu        | Profile           |     Live Chat       |                       |                       |
+| Divyansh Vyas               | Login             |     Register        |                       |                       |
+| Aditya Arora                | Login             |     Register        |                       |                       |
+
+
+**Getting Started**
 
 Prerequisites
-Installation Steps
+To have a local copy of this project up and running on your local machine, you will first need to install:
+
+yarn
+
+**Installing**
+
+Yarn via npm
+It is recommended to install Yarn through the npm package manager, which comes bundled with Node.js when you install it on your system.
+Once you have npm installed you can run the following both to install and upgrade Yarn:
+npm install --global yarn
+Check that Yarn is installed by running:
+yarn --version
+
+Running on Local Machine
+
+Install Dependencies
+Run the following command to download and install all dependencies:
+yarn install
+
+Start
+Run the following command to start the project locally:
+yarn start
+
+**Built With**
+
+ReactJS - A JavaScript library for building user interfaces
+
+React Router - Declarative Routing for React.js
+
+React Table - Lightweight and extensible data tables for React.
+
+React Horizontal Gallery - Horizontal Carousal needs to be installed 
+
+
+**References Used**
+
+
+ReactJS Documentation - Official ReactJS Documentation
+React Router Web Guide - React Router Documentation
+Dev.To - Developers Community Article
+Design influencer - 
+Regex - 
+Horizontal Gallery - 
+Membership - 
+Meal Planner - 

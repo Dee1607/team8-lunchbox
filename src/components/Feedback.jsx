@@ -1,21 +1,26 @@
+//Author: Janvi Patel
+//Description: To get feedback from users and store to the database for showcasing testimonials afterwards
+
 import React from "react";
 import styled from "styled-components";
 import { TitleStyles } from "./ReusableStyles";
 import axios from "axios";
 import {useState}  from "react";
 
+//Feedback function contains UI design and also a function that triggers the AWS lambda to store the feedback
 export default function Feedback() {
 
-  const [feedback, setFeedback] = useState( '' );
+  const [feedback, setFeedback] = useState( '' );     //declare feedback variable to store the user feedback
 
-  const handleStoreData =  (feedback) => {
-    console.log(feedback);
+  //declare feedback variable to store the user feedback
+  const handleStoreData =  (feedback) => {      //API call
     axios.post("https://72x5ya9782.execute-api.us-east-1.amazonaws.com/default/LambdaFeedback",JSON.stringify({data: feedback})).then((response) => {
     }).catch((error) => {
         console.log("Eroor")
     })
   }
 
+  //setfeedback field once user enters the feedback and when press on submit button the data is being stored
   return (
     <Section id="newsletter">
       <div className="title">
@@ -25,14 +30,14 @@ export default function Feedback() {
       </div>
       <div className="container">
         <input type="text" placeholder="Provide Feedback Here..." value={feedback}
-                 onChange={e => setFeedback(e.target.value)}
-         />
+                 onChange={e => setFeedback(e.target.value)} />   
         <button onClick={e => handleStoreData(feedback)}>Submit</button>
       </div>
     </Section>
   );
 }
 
+//Styling for the feedback feature
 const Section = styled.section`
   border: 0.01rem solid black;
   padding: 4rem;

@@ -1,3 +1,6 @@
+//Author: Deep Patel
+//Description: Navigation bar to section the menu option
+
 import React, { useState } from "react";
 import styled from "styled-components";
 import lunchbox from "../assets/logo4.png";
@@ -6,6 +9,8 @@ export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
+
+  //hashtags are provided to open those pages and onclick state is changed
   return (
     <>
     <section>
