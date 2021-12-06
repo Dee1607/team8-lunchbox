@@ -4,6 +4,9 @@
 import React from "react";
 import Deep from "../assets/avatar1.jpg"
 import Janvi from "../assets/avatar2.jpg"
+import Preetham from "../assets/avatar3.png"
+import Divyansh from "../assets/avatar4.png"
+import Aditya from "../assets/avatar5.png"
 import styled from "styled-components";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
@@ -29,21 +32,22 @@ export default function Footer() {
       lastname: "Patel",    },
     {
       id: 3,
-      image: Deep,
-      firstname: "Adity",
-      lastname: "Arora",
+      image: Preetham,
+      firstname: "Preetham",
+      lastname: "Tikkavarapu",
+      
     },
     {
       id: 4,
-      image: Deep,
+      image: Divyansh,
       firstname: "Divyansh",
       lastname: "Vyas",
     },
     {
       id: 5,
-      image: Deep,
-      firstname: "Preetham",
-      lastname: "Tikkavarapu",
+      image: Aditya,
+      firstname: "Aditya",
+      lastname: "Arora",
     },
   ];
 
