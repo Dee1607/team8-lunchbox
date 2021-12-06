@@ -11,11 +11,11 @@ export default function Feedback() {
   const handleStoreData =  (feedback) => {
     console.log(feedback);
     axios.post("https://72x5ya9782.execute-api.us-east-1.amazonaws.com/default/LambdaFeedback",JSON.stringify({data: feedback})).then((response) => {
-        alert.message('Successfully stored data into database');
     }).catch((error) => {
         console.log("Eroor")
     })
   }
+
   return (
     <Section id="newsletter">
       <div className="title">

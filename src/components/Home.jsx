@@ -7,35 +7,37 @@ import { TitleStyles } from "./ReusableStyles";
 export default function Home() {
   return (
     <Section id="home">
-      <div className="title">
-        <h1 className="yellow">What we do?</h1>
-        <p>
-            The Lunchbox is a Home-made food delivery system. We provide food full of taste of your home and full of nutricians.
-        </p>
-      </div>
-      <div className="home">
-        <div className="service">
-          <img src={home2} alt="" />
-          <p>
-            We have supervised caterares at our service to prepare healthy food with a taste just as you like.
-          </p>
-          <button>Read More</button>
-        </div>
-        <div className="service yellow">
-          <img src={home1} alt="" />
-          <p>
-            We bring food to your doorstep wrapped inside a lunchbox with love.
-          </p>
-          <button>Read More</button>
-        </div>
-        <div className="service">
-          <img src={home3} alt="" />
-          <p>
-            We also provide premium home for nutricians's support, free deliveries and more offers.
-          </p>
-          <button>Read More</button>
-        </div>
-      </div>
+    <div className="container">
+          <div className="title">
+            <h1 className="yellow">What we do?</h1>
+            <p>
+                The Lunchbox is a Home-made food delivery system. We provide food full of taste of your home and full of nutricians.
+            </p>
+          </div>
+          <div className="home">
+            <div className="service">
+              <img src={home2} alt="" />
+              <p>
+                We have supervised caterares at our service to prepare healthy food with a taste just as you like.
+              </p>
+              <button>Read More</button>
+            </div>
+            <div className="service yellow">
+              <img src={home1} alt="" />
+              <p>
+                We bring food to your doorstep wrapped inside a lunchbox with love.
+              </p>
+              <button>Read More</button>
+            </div>
+            <div className="service">
+              <img src={home3} alt="" />
+              <p>
+                We also provide premium home for nutricians's support, free deliveries and more offers.
+              </p>
+              <button>Read More</button>
+            </div>
+          </div>
+    </div>
     </Section>
   );
 }
@@ -44,6 +46,12 @@ const Section = styled.section`
 padding: 5rem;
   margin: 2rem 4rem;
   ${TitleStyles};
+  .container {
+    margin: 0.5rem;
+    padding-top: 1vw;
+    padding-bottom: 4vw;
+    background-color: white;
+    border-radius: 1rem;
   .home {
     padding: 1rem;
     display: grid;

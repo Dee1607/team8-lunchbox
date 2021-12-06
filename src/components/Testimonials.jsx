@@ -1,28 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import avatar1 from "../assets/avatar1.jpg";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from "axios";
 import {useEffect,useState}  from "react";
 
 export default function Testimonials() {
-  
+
   const [testimonials, settestimonials] = useState([]);
   
-  useEffect ( async() => 
-  {
-      const data = await
+  useEffect ( () => {
       axios.post("https://wqw4fz1nqd.execute-api.us-east-1.amazonaws.com/default/LambdaTestimonials",JSON.stringify({data: 'testimonials'}))
         .then((response) => {
-          console.log(response.data);
           settestimonials(response.data);
-          console.log("testimonials");
-          console.log(testimonials);
       }).catch((error) => {
-          console.log("Eroor")
+          console.log("Eroor",error)
       })
   }, []); 
-  
+
   return (
     <Section id="testimonials">
       <div className="container">
@@ -32,28 +26,20 @@ export default function Testimonials() {
           </h1>
         </div>
 
-        <div className="items" style={{alignContent: "center"}}>
-        {
-         
-        }
-
-      </div>
-
-        <div className="testimonials">
-          <div className="testimonial"> {
-              testimonials.map((value) => {
+ 
+          {testimonials.map((value) => {
                 return (
-                  <div className="item">
-                    <div>
-                      <img className="image" src={value.URL} alt="" />
+                  <div className="testimonials">
+                  <div className="testimonial">
+                  	<div className="image">
+                      <img src={value.URL} alt=""></img>
                     </div>
-                    <h2>{value.id}</h2>
-                    <p>{value.feedback}</p>
-                  </div>
+                    <div></div>
+                    <p>"{value.feedback}"</p>
+                 </div>
+                </div>
                 );
               })}
-          </div>
-        </div>
       </div>
     </Section>
   );
@@ -80,26 +66,29 @@ const Section = styled.section`
       background-color: white;
     }
     .testimonials {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 6vw;
-      margin-top: 3vw;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      margin-top: 3rem;
       .testimonial {
-        padding: 0 4vw;
-        display: flex;
+        display: contents;
         flex-direction: column;
+        gap: 0.6rem;
+        justify-content: center;
         align-items: center;
-        text-align: center;
-        gap: 1rem;
-        p {
-          font-size: 1.1rem;
-          line-height: 2rem;
-          letter-spacing: 0.1rem;
-          span {
-            color: #fc4958;
-          }
+        width: max-content;
+        height: max-content;
+        h3 {
+          color: #fc4958;
         }
+        p {
+          text-align: center;
+          font-size: 1.1rem;
+          line-height: 3rem;
+          letter-spacing: 0.1rem;
+          align-self: center
+        } 
+      }
         ${imageZoomEffect};
         .image {
           overflow: hidden;
@@ -107,8 +96,9 @@ const Section = styled.section`
           max-height: 10rem;
           border-radius: 10rem;
           img {
-            height: 10rem;
-          }
+            height: 15rem;
+            padding-left: 10rem;
+            width: 15rem;          }
         }
       }
     }
@@ -125,3 +115,4 @@ const Section = styled.section`
     }
   }
 `;
+

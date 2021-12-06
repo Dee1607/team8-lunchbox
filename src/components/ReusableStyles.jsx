@@ -4,7 +4,7 @@ export const imageZoomEffect = css`
   img {
     transition: 0.8s ease-in-out;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
   }
 `;

@@ -1,65 +1,19 @@
 import React from 'react'
 import styled from "styled-components";
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
-import bronze from "../assets/bronzecard.JPG";
-import gold from "../assets/goldcard.JPG";
-import silver from "../assets/silvercard.JPG";
 import axios from "axios";
 import {useEffect,useState}  from "react";
+
 export default function Membership() {
-  const data = [
-    {
-      id: 1,
-      image: gold,
-      name: "Gold",
-      price: "10.95",
-      details: "Gold Membership Details",
-    },
-    {
-        id: 2,
-        image: silver,
-      name: "Dimond",
-      price: "5.5",
-      details: "Dimond Membership Details",
-    },
-    {
-        id: 3,
-        image: bronze,
-      name: "Platinum",
-      price: "8",
-      details: "Platinum Membership Details",
-    },
-  ];
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      paritialVisibilityGutter: 60
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      paritialVisibilityGutter: 50
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      paritialVisibilityGutter: 30
-    }
-  };
 
   const [membershipDetails, setMembershipDetails] = useState([]);
   
-  useEffect ( async() => 
-  {
-      const data = await
+  useEffect ( () => {
       axios.post("https://hlyq9ayun6.execute-api.us-east-1.amazonaws.com/default/LamdaMembership",JSON.stringify({data: 'membership'}))
         .then((response) => {
-          console.log(response.data);
           setMembershipDetails(response.data);
-          alert.message('Successfully stored data into database');
       }).catch((error) => {
-          console.log("Eroor")
+          console.log("Eroor",error)
       })
   }, []); 
 
@@ -67,7 +21,7 @@ export default function Membership() {
       axios.post("https://bzs3fsb316.execute-api.us-east-1.amazonaws.com/default/LambdaCustomerMembership",JSON.stringify({data: event})).then((response) => {
           alert.message('Successfully stored data into database');
       }).catch((error) => {
-          console.log("Eroor")
+          console.log("Eroor",error)
       })
   }
   return (
@@ -78,15 +32,13 @@ export default function Membership() {
           <h1>
             <span>Membership</span> Plans
           </h1>
-      </div>
-      <div className="items" style={{alignContent: "center"}}>
+      <div className="items" >
         {
           membershipDetails.map((value) => {
             return (
-              <div className="item">
-                <div>
+              <div className="items">
+                <div className="item">
                   <img className="image" src={value.URL} alt="" />
-                </div>
                 <h2>{value.name}</h2>
                 <p>{value.detail1}</p>
                 <p>{value.detail2}</p>
@@ -94,9 +46,11 @@ export default function Membership() {
                 <h3>${value.price}/month</h3>
                 <button onClick = {() => {handleStoreData(value.id)}}>Buy Now</button>
               </div>
+              </div>
             );
           })
         }
+      </div>
       </div>
       </div>
     </Section>
@@ -105,8 +59,20 @@ export default function Membership() {
 
 const Section = styled.section`
   ${TitleStyles};
+  margin: 5vw;
+  background: linear-gradient(to right, #fc4958, #e85d04, #fc4958);
+  padding: 0.2rem;
+  border-radius: 1.5rem;
+  position: relative;  
+  ${TitleStyles};
+  .container {
+    margin: 0.5rem;
+    padding-top: 1vw;
+    padding-bottom: 4vw;
+    background-color: white;
+    border-radius: 1rem;
   .items {
-    inline-size: 150rem;
+    inline-size: 25rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
