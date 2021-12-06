@@ -69,7 +69,7 @@ export default function Menu() {
             </div>
         ))}
         elementWidth={230}
-        minPadding={200}
+        minPadding={150}
     />
     </div>
     </Section>
