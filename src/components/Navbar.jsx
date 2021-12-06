@@ -113,7 +113,8 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 4vw;
   position: fixed;
-  background-color: white;
+  opacity: 0.9;
+  background-color: black;
   width: -webkit-fill-available;
   top: 0;
   .brand {

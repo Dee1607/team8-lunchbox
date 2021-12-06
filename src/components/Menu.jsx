@@ -7,6 +7,8 @@ import HorizontalGallery from 'react-dynamic-carousel'
 import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
 import axios from 'axios';
 import {useEffect,useState}  from "react";
+// import AWSCognito from "aws-sdk";
+// import * as AmazonCognitoIdentity from 'amazon-cognito-identity-js';
 
 //Description: This function fetch the menu items from AWS, store the order data to AWS when user choose the dish 
 export default function Menu() {
@@ -24,7 +26,15 @@ export default function Menu() {
       })
   }, []); 
 
+
+  // var poolData = {
+  //   UserPoolId: "us-east-1_WKujMcOPr",
+  //   ClientId: "2d334oi6mum4onrasl6k64tauq"
+  // };
+  // const userPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
+
   //to store the data to order table
+  
   const handleStoreData =  (value,qty) => 
   {
         axios.post("https://sv4s5x7dlb.execute-api.us-east-1.amazonaws.com/default/LambdaOrders",JSON.stringify({data: value, qty: qty, customerid: 0})).then((response) => {
@@ -52,7 +62,7 @@ export default function Menu() {
                     <h2>{value.name}</h2>
                     <p>{value.nutrition}</p>
                     <h3>${value.price}/pcs</h3>
-                    <lable>Quantity: </lable><input type="text" value={qty} onChange={e => setQty(e.target.value)} ></input>
+                    <lable>Quantity: </lable><input id={value.id} type="text" onChange={e => setQty(e.target.value)} ></input>
                     <button onClick = {() => {handleStoreData(value,qty)}}>Buy Now</button>
                 </div>
                 </div>

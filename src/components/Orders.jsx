@@ -22,12 +22,13 @@ export default function Orders() {
         .then((response) => {
 
           //Regex matching to fetch the pricing from the string
+          console.log(response.data);
           var qtytxt = response.data[0].qty;
-          var qtynum = qtytxt.match(/\d/g);
+          var qtynum = qtytxt.match(/([0-9])+/g);
           setqty(qtynum);
 
           var costtxt = response.data[0].costperitem;
-          var costnum = costtxt.match(/\d/g);
+          var costnum = costtxt.match(/([0-9])+/g);
           setcost(costnum);
 
           setName(response.data[0].ordername)
