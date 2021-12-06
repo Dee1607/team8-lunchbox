@@ -23,7 +23,7 @@ export default function Home() {
             <div className="service">
               <img src={home2} alt="" />
               <p>
-                We have supervised caterares at our service to prepare healthy food with a taste just as you like.
+                Our team have supervised caterares at our service to prepare healthy food with a taste just as you like.
               </p>
               <button>Read More</button>
             </div>
