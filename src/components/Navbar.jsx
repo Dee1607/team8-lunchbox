@@ -31,12 +31,16 @@ export default function Navbar() {
             <a href="#home" className="active">
             Home
             </a>
+            
           </li>
           <li>
             <a href="#menu">Menu</a>
           </li>
           <li>
             <a href="#orders">Orders</a>
+          </li>
+          <li>
+            <a href="#profile">Profile</a>
           </li>
           <li>
             <a href="#mealplanner">Meal Planner</a>
@@ -47,6 +51,7 @@ export default function Navbar() {
           <li>
             <a href="#testimonials">Testimonials</a>
           </li>
+
           <li>
             <a href="#feedback">Feedback</a>
           </li>
@@ -73,6 +78,11 @@ export default function Navbar() {
           <li>
             <a href="#orders" onClick={() => setNavbarState(false)}>
               Orders
+            </a>
+          </li>
+          <li>
+            <a href="#profile" onClick={() => setNavbarState(false)}>
+              Profile
             </a>
           </li>
           <li>

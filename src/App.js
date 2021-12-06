@@ -1,8 +1,11 @@
 import React, { useEffect } from "react";
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Menu from './components/Menu';
 import Orders from './components/Orders';
+
+import { browserHistory, Routes } from 'react-router';
 import LexChat from "react-lex-plus";
 import AWS from "aws-sdk";
 import MealPlanner from './components/MealPlanner';
@@ -12,6 +15,7 @@ import Feedback from "./components/Feedback";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
+import Profile from "./components/Profile";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -56,7 +60,9 @@ export default function App() {
         <Membership />
         <Testimonials />
         <Feedback />
+        <Profile/>
         <Footer />
+       
         <LexChat
         botName="feedback"
         IdentityPoolId="us-east-1:8810824d-1965-4214-9265-adc5696ef478"

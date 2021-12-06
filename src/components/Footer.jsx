@@ -1,5 +1,6 @@
 import React from "react";
 import Deep from "../assets/avatar1.jpg"
+import Preetham from "../assets/preetham.jpg"
 import styled from "styled-components";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
@@ -31,6 +32,11 @@ export default function Footer() {
       id: 4,
       image: Deep,
       name: "Divyansh Vyas",
+    },
+    {
+      id: 5,
+      image: Preetham,
+      name: "Preetham Tikkavarapu",
     },
   ];
 
