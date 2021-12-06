@@ -1,37 +1,50 @@
+//Author: Deep Patel
+//Description: To setup about us page
+
 import React from "react";
 import Deep from "../assets/avatar1.jpg"
 import Preetham from "../assets/preetham.jpg"
+import Janvi from "../assets/avatar2.jpg";
 import styled from "styled-components";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
-import { imageZoomEffect, TitleStyles } from "./ReusableStyles";
+import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { imageZoomEffect } from "./ReusableStyles";
 
-
+//Footer contains business 
 export default function Footer() {
 
   const data = [
     {
       id: 1,
       image: Deep,
-      name: "Deep Patel",
+      firstname: "Deep",
+      lastname: "Patel",
     },
     {
       id: 2,
-      image: Deep,
-      name: "Janvi Patel",
-    },
+      image: Janvi,
+      firstname: "Janvi",
+      lastname: "Patel",    },
     {
       id: 3,
       image: Deep,
-      name: "Adity Arora",
+      firstname: "Adity",
+      lastname: "Arora",
     },
     {
       id: 4,
       image: Deep,
-      name: "Divyansh Vyas",
+      firstname: "Divyansh",
+      lastname: "Vyas",
+    },
+    {
+      id: 5,
+      image: Deep,
+      firstname: "Preetham",
+      lastname: "Tikkavarapu",
     },
     {
       id: 5,
@@ -40,15 +53,24 @@ export default function Footer() {
     },
   ];
 
+  //This section contains about us page design and contact information
   return (
     <div className="footer">
       <Section>
         
-        <div className="about container">
+        <div className="container">
           <div className="title">
             <h3>About Us</h3>
           </div>
+          <h2> "Fresh, Seasonal & Home-cooked" </h2>
           <p>
+              
+              Our menu is a wonderful mix of healthy nutritions with classic alongside exciting dishes inspired by the 
+              food of Raymond food. You can enjoy the lunch menu by chef's special menu. Your idea about
+              dishes are also welcomed.To stay up to date with our latest menus, news, offers &events, 
+              sign up to our mailing list.
+
+
             We provide the test of home on your doorsteps.
             To contact us reach out to us through our online 
             plateforms through Twiter, Facebook, and Whatsapp
@@ -82,7 +104,8 @@ export default function Footer() {
                 </div>
                 </div>
                 </li>
-                <p>{value.name}</p>
+                <p>{value.firstname}</p>
+                <p>{value.lastname}</p>
             </div>
           ))}
           </ul>
@@ -122,6 +145,7 @@ export default function Footer() {
   );
 }
 
+//Styling for the about us page section
 const Section = styled.footer`
   margin: 0;
   background: linear-gradient(to right, #fc4958, #e85d04);
@@ -131,7 +155,8 @@ const Section = styled.footer`
   gap: 10vw;
   padding: 4vw;
   row-gap: 5vw;
-  column-gap: 27rem;
+  column-gap: 10rem;
+  
   p {
     font-size: 1.1rem;
     line-height: 2rem;
@@ -166,7 +191,9 @@ const Section = styled.footer`
       }
     }
   }
+
   ${imageZoomEffect};
+  
   .image {
     max-height: 15rem;
     overflow: hidden;

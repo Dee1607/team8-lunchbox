@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from "react";
+//Author: Deep Patel
+//Description: Navigation bar to section the menu option
+
+import React, { useState } from "react";
 import styled from "styled-components";
 import lunchbox from "../assets/logo4.png";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
+
+  //hashtags are provided to open those pages and onclick state is changed
   return (
     <>
     <section>
@@ -119,7 +123,8 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 4vw;
   position: fixed;
-  background-color: white;
+  opacity: 0.9;
+  background-color: black;
   width: -webkit-fill-available;
   top: 0;
   .brand {

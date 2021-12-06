@@ -1,10 +1,12 @@
-import { css } from "styled-components";
+//Authors: Janvi Patel, Deep Patel
 
+import { css } from "styled-components";
+//Reuseable styles
 export const imageZoomEffect = css`
   img {
     transition: 0.8s ease-in-out;
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.05);
     }
   }
 `;

@@ -1,3 +1,5 @@
+//Authors: Janvi Patel, Preetham Tikkavarapu
+
 import React, { useEffect } from "react";
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom"
 import Footer from "./components/Footer";
@@ -5,9 +7,11 @@ import Home from "./components/Home";
 import Menu from './components/Menu';
 import Orders from './components/Orders';
 
+
 import { browserHistory, Routes } from 'react-router';
 import LexChat from "react-lex-plus";
 import AWS from "aws-sdk";
+
 import MealPlanner from './components/MealPlanner';
 import Membership from './components/Membership';
 import Navbar from "./components/Navbar";
@@ -41,13 +45,6 @@ export default function App() {
         opacity: 0,
        interval: 200,      
     }    );  }, []); 
-
-    AWS.config.update ({
-      region: "us-west-2",
-      credentials: new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: "us-east-1:8810824d-1965-4214-9265-adc5696ef478"
-      })
-    });
 
     return (    
       <>
