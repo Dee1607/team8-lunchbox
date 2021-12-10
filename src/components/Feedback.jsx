@@ -22,7 +22,7 @@ export default function Feedback() {
 
   //setfeedback field once user enters the feedback and when press on submit button the data is being stored
   return (
-    <Section id="newsletter">
+    <Section id="feedback">
       <div className="title">
         <h1>
           <span>Customer </span>Feedback

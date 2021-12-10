@@ -77,22 +77,23 @@ Deployment Link: https://myfoodieapp.auth.us-east-1.amazoncognito.com/login?clie
 **References Used**
 
 
-ReactJS Documentation - Official ReactJS Documentation
-React Router Web Guide - React Router Documentation
-Dev.To - Developers Community Article
-Regex - https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers 
-Horizontal Gallery - https://www.npmjs.com/package/react-horizontal-scrolling-menu 
-Membership - https://www.anytimefitness.com/membership/ 
-Meal Planner - https://www.eatthismuch.com/ 
-DynamoDB helper - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html 
-Update query - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html 
-Lambda usage: https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html	
-DynamoDB usage: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html	
-IAM Role Setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html	
-s3 Image storing: https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html	
-Carousel: https://www.npmjs.com/package/react-responsive-carousel	
-boilerplate: https://github.com/koolkishan/food-yummy-reactjs-food-website	
-Component Visibility change: https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components	
-Fa fa icons: https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react	
-Deployment on Heroku: https://devcenter.heroku.com/articles/git	
-Deployment on elastic beanstalk: https://www.red-gate.com/simple-talk/blogs/deploying-a-nodejs-application-from-github-to-aws-elastic-beanstalk-and-creating-a-ci-cd-aws-codepipeline/
+[1] ReactJS Documentation - Official ReactJS Documentation
+[2] React Router Web Guide - React Router Documentation
+[3] Dev.To - Developers Community Article
+[4] Regex - https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers 
+[5] Horizontal Gallery - https://www.npmjs.com/package/react-horizontal-scrolling-menu 
+[6] Membership - https://www.anytimefitness.com/membership/ 
+[7] Meal Planner - https://www.eatthismuch.com/ 
+[8] DynamoDB helper - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html 
+[9] Update query - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html 
+[10] Lambda usage: https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html	
+[11] DynamoDB usage: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html	
+[12] IAM Role Setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html	
+[13] s3 Image storing: https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html	
+[14] Carousel: https://www.npmjs.com/package/react-responsive-carousel	
+[15] boilerplate: https://github.com/koolkishan/food-yummy-reactjs-food-website	
+[16] Component Visibility change: https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components	
+[17] Fa fa icons: https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react	
+[18] Deployment on Heroku: https://devcenter.heroku.com/articles/git	
+[19] Deployment on elastic beanstalk: https://www.red-gate.com/simple-talk/blogs deploying-a-nodejs-application-from-github-to-aws-elastic-beanstalk-and-creating-a-ci-cd-aws-codepipeline/
+[20] Login/Signup Page Help - https://morioh.com/p/17a6491961d4 
