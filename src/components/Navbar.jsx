@@ -54,9 +54,7 @@ export default function Navbar() {
           <li>
             <a href="#feedback">Feedback</a>
           </li>
-          <li>
-            <a href="#logout">Logout</a>
-          </li>
+          
         </ul>
       </Nav>
       </section>
@@ -102,11 +100,7 @@ export default function Navbar() {
               Feedback
             </a>
           </li>
-          <li>
-            <a href="#logout" onClick={() => setNavbarState(false)}>
-              Feedback
-            </a>
-          </li>
+          
         </ul>
       </ResponsiveNav>
       </section>

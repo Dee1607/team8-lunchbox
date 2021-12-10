@@ -9,7 +9,6 @@ import MealPlanner from './components/MealPlanner';
 import Membership from './components/Membership';
 import Navbar from "./components/Navbar";
 import Feedback from "./components/Feedback";
-import Logout from "./components/Logout";
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
 import scrollreveal from "scrollreveal";
@@ -32,7 +31,6 @@ export default function App() {
     #membership,
     #testimonials,
     #feedback,
-    #logout,
     .footer
     `,
      { 
@@ -51,7 +49,6 @@ export default function App() {
         <Membership />
         <Testimonials />
         <Feedback />
-        <Logout /> 
         <Footer />  
       </>
     );
