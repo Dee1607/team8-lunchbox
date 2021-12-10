@@ -76,6 +76,9 @@ Deployment Link: https://myfoodieapp.auth.us-east-1.amazoncognito.com/login?clie
 
 Alternate link for prototype design: https://lunchbox-team8.herokuapp.com/
 
+**Business Pitch Video link**
+Link: https://youtu.be/6C_vOBa6lCE 
+
 **References Used**
 
 
