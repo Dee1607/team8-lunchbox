@@ -43,6 +43,9 @@ export default function Navbar() {
             <a href="#orders">Orders</a>
           </li>
           <li>
+              <a href="profile">Profile</a>
+            </li>
+          <li>
             <a href="#mealplanner">Meal Planner</a>
           </li>
           <li>
@@ -85,6 +88,11 @@ export default function Navbar() {
             Meal Planner
             </a>
           </li>
+          <li>
+              <a href="profile" onClick={() => setNavbarState(false)}>
+                Profile
+              </a>
+            </li>
           <li>
             <a href="#membership" onClick={() => setNavbarState(false)}>
               Membership
