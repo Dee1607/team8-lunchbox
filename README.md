@@ -82,43 +82,42 @@ Link: https://youtu.be/6C_vOBa6lCE
 **References Used**
 
 
-[1] Reactjs.org. 2021. Getting Started – React. [online] Available at: <https://reactjs.org/docs/getting-started.html> [Accessed 11 December 2021].
+[1] Getting Started – React. Reactjs.org. (2021). Retrieved 11 December 2021, from https://reactjs.org/docs/getting-started.html.
 
-[2] ReactRouterWebsite. 2021. React Router: Declarative Routing for React. [online] Available at: <https://v5.reactrouter.com/web/guides/quick-start> [Accessed 11 December 2021].
+[2] React Router: Declarative Routing for React. ReactRouterWebsite. (2021). Retrieved 11 December 2021, from https://v5.reactrouter.com/web/guides/quick-start.
 
-[3] Singhal, G. and Server, D., 2021. Deploy a React App on a Server | Pluralsight. [online] Pluralsight.com. Available at: <https://www.pluralsight.com/guides/deploy-a-react-app-on-a-server> [Accessed 11 December 2021].
+[3] Singhal, G. (2021). Deploy a React App on a Server | Pluralsight. Pluralsight.com. Retrieved 11 December 2021, from https://www.pluralsight.com/guides/deploy-a-react-app-on-a-server.
 
-[4] numbers, R., omuraliev, m., Salvad&#243;, C. and Dachao, C., 2021. Regex using javascript to return just numbers. [online] Stack Overflow. Available at: <https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers> [Accessed 11 December 2021].
+[4]omuraliev, m., Salvad;, C., & Dachao, C. (2021). Regex using javascript to return just numbers. Stack Overflow. Retrieved 10 December 2021, from https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers.
 
-[5] npm. 2021. react-horizontal-scrolling-menu. [online] Available at: <https://www.npmjs.com/package/react-horizontal-scrolling-menu> [Accessed 11 December 2021].
+[5] react-horizontal-scrolling-menu. npm. (2021). Retrieved 11 December 2021, from https://www.npmjs.com/package/react-horizontal-scrolling-menu.
 
-[6] Anytimefitness.com. 2021. [online] Available at: <https://www.anytimefitness.com/membership/> [Accessed 11 December 2021].
+[6] Anytimefitness.com. (2021). Retrieved 11 December 2021, from https://www.anytimefitness.com/membership/.
 
-[7] Eat This Much, I., 2021. Eat This Much, your personal diet assistant. [online] Eat This Much. Available at: <https://www.eatthismuch.com/> [Accessed 11 December 2021].
+[7] Eat This Much, your personal diet assistant. Eat This Much. (2021). Retrieved 11 December 2021, from https://www.eatthismuch.com.
 
-[8] DynamoDB helper. [online] Available at: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html 
-[Accessed 11 December 2021].
+[8] Query and Scan the Data - Amazon DynamoDB. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html.
 
-[9] Docs.aws.amazon.com. 2021. Modifying Data in a Table - Amazon DynamoDB. [online] Available at: <https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html> [Accessed 11 December 2021].
+[9] Modifying Data in a Table - Amazon DynamoDB. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html.
 
-[10] Docs.aws.amazon.com. 2021. Using AWS Lambda with Amazon DynamoDB - AWS Lambda. [online] Available at: <https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html> [Accessed 11 December 2021].
+[10] Using AWS Lambda with Amazon DynamoDB - AWS Lambda. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html.
 
-[11] DynamoDB usage. [online] Available at: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html	[Accessed 11 December 2021]
+[11] Amazon dynamodb - docs.aws.amazon.com. (n.d.). Retrieved December 11, 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html. 
 
-[12] Docs.aws.amazon.com. 2021. Amazon DynamoDB: Allows access to a specific table - AWS Identity and Access Management. [online] Available at: <https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html> [Accessed 11 December 2021].
+[12] Iam. (2011). Retrieved from https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html
 
-[13] Docs.aws.amazon.com. 2021. Uploading objects - Amazon Simple Storage Service. [online] Available at: <https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html> [Accessed 11 December 2021].
+[13] Uploading objects - Amazon Simple Storage Service. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html.
 
-[14] npm. 2021. react-responsive-carousel. [online] Available at: <https://www.npmjs.com/package/react-responsive-carousel> [Accessed 11 December 2021].
+[14] react-responsive-carousel. npm. (2021). Retrieved 11 December 2021, from https://www.npmjs.com/package/react-responsive-carousel.
+[15] GitHub - koolkishan/food-yummy-reactjs-food-website. GitHub. (2021). Retrieved 11 December 2021, from https://github.com/koolkishan/food-yummy-reactjs-food-website.
 
-[15] GitHub. 2021. GitHub - koolkishan/food-yummy-reactjs-food-website. [online] Available at: <https://github.com/koolkishan/food-yummy-reactjs-food-website> [Accessed 11 December 2021].
+[16] Singhal, G. (2021). How to Show and Hide ReactJS Components | Pluralsight. Pluralsight.com. Retrieved 11 December 2021, from https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components.
 
-[16] Singhal, G. and Components, H., 2021. How to Show and Hide ReactJS Components | Pluralsight. [online] Pluralsight.com. Available at: <https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components> [Accessed 11 December 2021].
+[17] Font Awesome. Fontawesome.com. (2021). Retrieved 11 December 2021, from https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react.
 
-[17] Fontawesome.com. 2021. Font Awesome. [online] Available at: <https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react> [Accessed 11 December 2021].
+[18] Deploying with Git | Heroku Dev Center. Devcenter.heroku.com. (2021). Retrieved 11 December 2021, from https://devcenter.heroku.com/articles/git.
 
-[18] Devcenter.heroku.com. 2021. Deploying with Git | Heroku Dev Center. [online] Available at: <https://devcenter.heroku.com/articles/git> [Accessed 11 December 2021].
+[19] Torres, D. (2021). Blogs - Simple Talk. Simple Talk. Retrieved 11 December 2021, from https://www.red-gate.com/simple-talk/blogs/.
+deploying-a-nodejs-application-from-github-to-aws-elastic-beanstalk-and-creating-a-ci-cd-aws-codepipeline/
 
-[19] Torres, D., 2021. Blogs - Simple Talk. [online]  Available at: <https://www.red-gate.com/simple-talk/blogs> [Accessed 11 December 2021].
-
-[20] Morioh.com. 2021. Social Network for Programmers and Developers. [online] Available at: <https://morioh.com/p/17a6491961d4> [Accessed 11 December 2021].
+[20] Social Network for Programmers and Developers. Morioh.com. (2021). Retrieved 11 December 2021, from https://morioh.com/p/17a6491961d4.
