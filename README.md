@@ -109,6 +109,7 @@ Link: https://youtu.be/6C_vOBa6lCE
 [13] Uploading objects - Amazon Simple Storage Service. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html.
 
 [14] react-responsive-carousel. npm. (2021). Retrieved 11 December 2021, from https://www.npmjs.com/package/react-responsive-carousel.
+
 [15] GitHub - koolkishan/food-yummy-reactjs-food-website. GitHub. (2021). Retrieved 11 December 2021, from https://github.com/koolkishan/food-yummy-reactjs-food-website.
 
 [16] Singhal, G. (2021). How to Show and Hide ReactJS Components | Pluralsight. Pluralsight.com. Retrieved 11 December 2021, from https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components.
