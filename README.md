@@ -82,23 +82,43 @@ Link: https://youtu.be/6C_vOBa6lCE
 **References Used**
 
 
-[1] ReactJS Documentation - Official ReactJS Documentation
-[2] React Router Web Guide - React Router Documentation
-[3] Dev.To - Developers Community Article
-[4] Regex - https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers 
-[5] Horizontal Gallery - https://www.npmjs.com/package/react-horizontal-scrolling-menu 
-[6] Membership - https://www.anytimefitness.com/membership/ 
-[7] Meal Planner - https://www.eatthismuch.com/ 
-[8] DynamoDB helper - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html 
-[9] Update query - https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html 
-[10] Lambda usage: https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html	
-[11] DynamoDB usage: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html	
-[12] IAM Role Setup: https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html	
-[13] s3 Image storing: https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html	
-[14] Carousel: https://www.npmjs.com/package/react-responsive-carousel	
-[15] boilerplate: https://github.com/koolkishan/food-yummy-reactjs-food-website	
-[16] Component Visibility change: https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components	
-[17] Fa fa icons: https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react	
-[18] Deployment on Heroku: https://devcenter.heroku.com/articles/git	
-[19] Deployment on elastic beanstalk: https://www.red-gate.com/simple-talk/blogs deploying-a-nodejs-application-from-github-to-aws-elastic-beanstalk-and-creating-a-ci-cd-aws-codepipeline/
-[20] Login/Signup Page Help - https://morioh.com/p/17a6491961d4 
+[1] Getting Started – React. Reactjs.org. (2021). Retrieved 11 December 2021, from https://reactjs.org/docs/getting-started.html.
+
+[2] React Router: Declarative Routing for React. ReactRouterWebsite. (2021). Retrieved 11 December 2021, from https://v5.reactrouter.com/web/guides/quick-start.
+
+[3] Singhal, G. (2021). Deploy a React App on a Server | Pluralsight. Pluralsight.com. Retrieved 11 December 2021, from https://www.pluralsight.com/guides/deploy-a-react-app-on-a-server.
+
+[4]omuraliev, m., Salvad;, C., & Dachao, C. (2021). Regex using javascript to return just numbers. Stack Overflow. Retrieved 10 December 2021, from https://stackoverflow.com/questions/1183903/regex-using-javascript-to-return-just-numbers.
+
+[5] react-horizontal-scrolling-menu. npm. (2021). Retrieved 11 December 2021, from https://www.npmjs.com/package/react-horizontal-scrolling-menu.
+
+[6] Anytimefitness.com. (2021). Retrieved 11 December 2021, from https://www.anytimefitness.com/membership/.
+
+[7] Eat This Much, your personal diet assistant. Eat This Much. (2021). Retrieved 11 December 2021, from https://www.eatthismuch.com.
+
+[8] Query and Scan the Data - Amazon DynamoDB. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.Python.04.html.
+
+[9] Modifying Data in a Table - Amazon DynamoDB. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.UpdateData.html.
+
+[10] Using AWS Lambda with Amazon DynamoDB - AWS Lambda. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html.
+
+[11] Amazon dynamodb - docs.aws.amazon.com. (n.d.). Retrieved December 11, 2021, from https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SQLtoNoSQL.WriteData.html. 
+
+[12] Iam. (2011). Retrieved from https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_dynamodb_specific-table.html
+
+[13] Uploading objects - Amazon Simple Storage Service. Docs.aws.amazon.com. (2021). Retrieved 11 December 2021, from https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html.
+
+[14] react-responsive-carousel. npm. (2021). Retrieved 11 December 2021, from https://www.npmjs.com/package/react-responsive-carousel.
+
+[15] GitHub - koolkishan/food-yummy-reactjs-food-website. GitHub. (2021). Retrieved 11 December 2021, from https://github.com/koolkishan/food-yummy-reactjs-food-website.
+
+[16] Singhal, G. (2021). How to Show and Hide ReactJS Components | Pluralsight. Pluralsight.com. Retrieved 11 December 2021, from https://www.pluralsight.com/guides/how-to-show-and-hide-reactjs-components.
+
+[17] Font Awesome. Fontawesome.com. (2021). Retrieved 11 December 2021, from https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react.
+
+[18] Deploying with Git | Heroku Dev Center. Devcenter.heroku.com. (2021). Retrieved 11 December 2021, from https://devcenter.heroku.com/articles/git.
+
+[19] Torres, D. (2021). Blogs - Simple Talk. Simple Talk. Retrieved 11 December 2021, from https://www.red-gate.com/simple-talk/blogs/.
+deploying-a-nodejs-application-from-github-to-aws-elastic-beanstalk-and-creating-a-ci-cd-aws-codepipeline/
+
+[20] Social Network for Programmers and Developers. Morioh.com. (2021). Retrieved 11 December 2021, from https://morioh.com/p/17a6491961d4.
