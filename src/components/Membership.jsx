@@ -146,8 +146,9 @@ export default function Membership() {
                 );
               })
             }
-          </div>
-          <div> { visibilityStatus ?  <Payment /> : null}</div>
+          </div >
+          <div > { visibilityStatus ?  <Payment /> : null}</div>
+
         </div>
       </div>
     </Section>
@@ -163,14 +164,15 @@ const Section = styled.section`
   border-radius: 1.5rem;
   position: relative;  
   ${TitleStyles};
+  
   .container {
-    margin: 0.5rem;
-    padding-top: 10px;
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-bottom: 20px;
-    background-color: white;
-    border-radius: 1rem;
+      margin: 0.5rem;
+      padding-top: 10px;
+      padding-right: 100px;
+      padding-left: 100px;
+      padding-bottom: 20px;
+      background-color: white;
+      border-radius: 1rem;
   .items {
     inline-size: 25rem;
     display: grid;
