@@ -53,8 +53,7 @@ export default function Navbar() {
           </li>
           <li>
             <a href="#feedback">Feedback</a>
-          </li>
-          
+          </li>          
         </ul>
       </Nav>
       </section>
@@ -100,7 +99,6 @@ export default function Navbar() {
               Feedback
             </a>
           </li>
-          
         </ul>
       </ResponsiveNav>
       </section>

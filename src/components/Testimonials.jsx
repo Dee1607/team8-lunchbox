@@ -63,7 +63,7 @@ const Section = styled.section`
     ${TitleStyles};
     .title {
       position: absolute;
-      top: -1rem;
+      top: 1rem;
       left: 25%;
       padding: 0 2rem;
       background-color: white;

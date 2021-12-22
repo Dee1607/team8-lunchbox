@@ -11,12 +11,94 @@ import {useState}  from "react";
 //  3. Choose from menu
 export default function MealPlanner() {
 
-  const [visibilityStatus,setVisibilityStatus] = useState("");    //visibility message setup for the successful meal planning message
+  const [total, setTotal] = useState([]); 
 
   //Payment handler indicate if the successful payment then the success message
-  const paymentHandler = () => {
-    setVisibilityStatus("Order is placed. Estimated Delivery in 20 minutes." );
+  const [visibilityStatus,setVisibilityStatus] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+
+  //status is displayed when the payment is successfully done
+  const showMessageHandler = async () => {
+    setShowMessage("Order is placed. Estimated Delivery in 20 minutes." );
+
+    await delay(3000);
+    setShowMessage(false);
+    setVisibilityStatus(false);
   }
+  const paymentHandler = () => setVisibilityStatus(true)
+
+  const Payment = () => (
+    <Section id="orders">
+    <div className="container">
+
+    <div>
+    <div style={{margin:"100px",marginTop:"0px" ,marginBottom:"10px", backgroundColor:"beige"}}>
+        <table width="100%"> 
+        <tr>
+            <th>
+                <div className="image"> <img src="https://www.freepnglogos.com/uploads/visa-logo-download-png-21.png" width="300px"></img> </div>
+                <div> <label for="">**** **** **** 9999</label> </div>
+                <div> <small><span>Expiry: </span><span>10/27</span></small> <small><span>Name:</span><span> Patel</span></small> </div>
+            </th>
+            <th>
+                <div className="image"> <img src="https://www.freepnglogos.com/uploads/mastercard-png/file-mastercard-logo-svg-wikimedia-commons-4.png" width="300px"></img> </div>
+                <div> <label>**** **** **** 8888</label> </div>
+                <div> <small><span>Expiry: </span><span>10/27</span></small> <small><span>Name:</span><span> Patel</span></small> </div>
+            </th>
+            <th>
+                <div className="image"> <img src="https://www.freepnglogos.com/uploads/discover-png-logo/credit-cards-discover-png-logo-4.png" width="300px"></img> </div>
+                <div> <label>**** **** **** 7777</label> </div>
+                <div> <small><span>Expiry: </span><span>10/27</span></small> <small><span>Name:</span><span> Patel</span></small> </div>
+            </th>
+        </tr>
+        </table>
+    </div>
+    <div className="container">
+    <div className="card p-3">
+        <div className="title">
+            <h2>
+                <span>CREDIT CARD </span>
+            </h2>
+        </div>
+        <div className="collapse show p-3 pt-0" id="collapseExample">
+            <div className="row">
+                <div className="col-lg-7">
+                    <form action="" className="form">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="form__div"> <input type="text" className="form-control"></input> <label className="form__label">Card Number</label> </div>
+                            </div>
+                            <div className="col-6">
+                                <div className="form__div"> <input type="text" className="form-control"></input> <label className="form__label">MM / yy</label> </div>
+                            </div>
+                            <div className="col-6">
+                                <div className="form__div"> <input type="password" className="form-control"></input> <label className="form__label">cvv code</label> </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="form__div"> <input type="text" className="form-control"></input> <label className="form__label">name on the card</label> </div>
+                            </div>
+                            <div style={{paddingBottom:"1rem"}}></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div className="container">
+        <div className="items">
+            <div className="item">
+              <div style={{paddingTop:"2rem"}}></div>
+                <button type="submit" className="button" onClick={() => {showMessageHandler()}}>Make Payment</button>
+                <p style={{backgroundColor:"#cbffc0"} }>{showMessage}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</Section>
+)
 
   //UI design for creating the table to showcase 7 day meal
   return (
@@ -78,9 +160,9 @@ export default function MealPlanner() {
             <tr>
               <td><div className="submitstyle"><button onClick={() => {paymentHandler()}}>Submit</button></div></td>
             </tr>
-            <tr><td>
-            <p style={{backgroundColor:"#cbffc0"}}>{visibilityStatus}</p>
-          </td></tr>
+            <tr>
+              <td style={{backgroundColor:"white"}}>{ visibilityStatus ?  <Payment /> : null}</td>
+            </tr>
       </table>
       </div>
       </div>
@@ -106,7 +188,7 @@ ${TitleStyles};
     text-align-last: center;
     margin: 0.5rem;
     padding-top: 1vw;
-    padding-bottom: 4vw;
+    padding-bottom: 0vw;
     background-color: white;
     border-radius: 1rem;
   .tableStyle{
