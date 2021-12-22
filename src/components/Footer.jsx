@@ -1,18 +1,18 @@
 //Author: Deep Patel
 //Description: To setup about us page
 
+import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import React from "react";
-import Deep from "../assets/avatar1.jpg"
-import Janvi from "../assets/avatar2.jpg"
-import Preetham from "../assets/avatar3.png"
-import Divyansh from "../assets/avatar4.png"
-import Aditya from "../assets/avatar5.png"
-import styled from "styled-components";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
-import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import styled from "styled-components";
+import Deep from "../assets/avatar1.jpg";
+import Janvi from "../assets/avatar2.jpg";
+import Preetham from "../assets/avatar3.png";
+import Divyansh from "../assets/avatar4.png";
+import Aditya from "../assets/avatar5.png";
 import { imageZoomEffect } from "./ReusableStyles";
 
 //Footer contains business 
@@ -54,7 +54,7 @@ export default function Footer() {
   //This section contains about us page design and contact information
   return (
     <div className="footer">
-      <Section>
+      <Section id="footer_element">
         
         <div className="container">
           <div className="title">

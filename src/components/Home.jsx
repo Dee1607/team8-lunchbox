@@ -25,21 +25,27 @@ export default function Home() {
               <p>
                 Our team have supervised caterares at our service to prepare healthy food with a taste just as you like.
               </p>
-              <button>Read More</button>
+              <button>
+                <a href="#footer_element">Read More</a>
+              </button>
             </div>
             <div className="service yellow">
               <img src={home1} alt="" />
               <p>
                 We bring food to your doorstep wrapped inside a lunchbox with love.
               </p>
-              <button>Read More</button>
+              <button>
+                <a href="#footer_element">Read More</a>
+              </button>
             </div>
             <div className="service">
               <img src={home3} alt="" />
               <p>
                 We also provide premium home for nutricians's support, free deliveries and more offers.
               </p>
-              <button>Read More</button>
+              <button>
+                <a href="#footer_element">Read More</a>
+              </button>
             </div>
           </div>
     </div>
@@ -93,6 +99,10 @@ padding: 5rem;
           background-color: #f9c74f;
         }
       }
+      a {
+        color: inherit; 
+        text-decoration: inherit; 
+      }
     }
     .yellow {
         
@@ -111,4 +121,5 @@ padding: 5rem;
     }
   }
 `;
+
 
