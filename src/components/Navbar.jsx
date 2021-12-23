@@ -3,104 +3,111 @@
 
 import React, { useState } from "react";
 import styled from "styled-components";
+import "../css/Styles.css";
+import Profile from "./Profile";
 import lunchbox from "../assets/logo4.png";
 import { VscChromeClose } from "react-icons/vsc";
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
+  const [show, setShow] = useState(false);
   const html = document.querySelector("html");
   html.addEventListener("click", () => setNavbarState(false));
 
   //hashtags are provided to open those pages and onclick state is changed
   return (
     <>
-    <section>
-      <Nav>
-        <div className="brand">
-          <img src={lunchbox} alt="Icon" />
-          <div className="toggle">
-            {navbarState ? (
-              <VscChromeClose onClick={() => setNavbarState(false)} />
-            ) : (
-              <x
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setNavbarState(true);
-                }}
-              />
-            )}
+      <section>
+        <Nav>
+          <div className="brand">
+            <img src={lunchbox} alt="Icon" />
+            <div className="toggle">
+              {navbarState ? (
+                <VscChromeClose onClick={() => setNavbarState(false)} />
+              ) : (
+                <x
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setNavbarState(true);
+                  }}
+                />
+              )}
+            </div>
           </div>
-        </div>
-        <ul className="links">
-          <li>
-            <a href="#home" className="active">
-            Home
-            </a>
-          </li>
-          <li>
-            <a href="#menu">Menu</a>
-          </li>
-          <li>
-            <a href="#orders">Orders</a>
-          </li>
-          <li>
-            <a href="#mealplanner">Meal Planner</a>
-          </li>
-          <li>
-            <a href="#membership">Membership</a>
-          </li>
-          <li>
-            <a href="#testimonials">Testimonials</a>
-          </li>
-          <li>
-            <a href="#feedback">Feedback</a>
-          </li>          
-        </ul>
-      </Nav>
+          <ul className="links">
+            <li>
+              <a href="#home" className="active">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#menu">Menu</a>
+            </li>
+            <li>
+              <a href="#orders">Orders</a>
+            </li>
+            <li>
+              <a href="#mealplanner">Meal Planner</a>
+            </li>
+            <li>
+              <a href="#membership">Membership</a>
+            </li>
+            <li>
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a href="#feedback">Feedback</a>
+            </li>
+            <button class='button1' onClick={() => setShow(true)}>Profile</button>
+
+            <Profile title="Profile" onClose={() => setShow(false)} show={show}>
+            </Profile>
+          </ul>
+        </Nav>
       </section>
       <section>
-      <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
-        <ul>
-          <li>
-            <a
-              href="#home"
-              className="active"
-              onClick={() => setNavbarState(false)}
-            >
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#menu" onClick={() => setNavbarState(false)}>
-              Menu
-            </a>
-          </li>
-          <li>
-            <a href="#orders" onClick={() => setNavbarState(false)}>
-              Orders
-            </a>
-          </li>
-          <li>
-            <a href="#mealplanner" onClick={() => setNavbarState(false)}>
-            Meal Planner
-            </a>
-          </li>
-          <li>
-            <a href="#membership" onClick={() => setNavbarState(false)}>
-              Membership
-            </a>
-          </li>
-          <li>
-            <a href="#testimonials" onClick={() => setNavbarState(false)}>
-              Testimonials
-            </a>
-          </li>
-          <li>
-            <a href="#feedback" onClick={() => setNavbarState(false)}>
-              Feedback
-            </a>
-          </li>
-        </ul>
-      </ResponsiveNav>
+        <ResponsiveNav state={navbarState} className={navbarState ? "show" : ""}>
+          <ul>
+            <li>
+              <a
+                href="#home"
+                className="active"
+                onClick={() => setNavbarState(false)}
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#menu" onClick={() => setNavbarState(false)}>
+                Menu
+              </a>
+            </li>
+            <li>
+              <a href="#orders" onClick={() => setNavbarState(false)}>
+                Orders
+              </a>
+            </li>
+            <li>
+              <a href="#mealplanner" onClick={() => setNavbarState(false)}>
+                Meal Planner
+              </a>
+            </li>
+            <li>
+              <a href="#membership" onClick={() => setNavbarState(false)}>
+                Membership
+              </a>
+            </li>
+            <li>
+              <a href="#testimonials" onClick={() => setNavbarState(false)}>
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a href="#feedback" onClick={() => setNavbarState(false)}>
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </ResponsiveNav>
       </section>
     </>
   );
