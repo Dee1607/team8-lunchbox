@@ -57,7 +57,9 @@ export default function Navbar() {
             <li>
               <a href="#feedback">Feedback</a>
             </li>
-            <button class='button1' onClick={() => setShow(true)}>Profile</button>
+            <li>
+              <a href="#profile" onClick={() => setShow(true)}>Profile</a>
+            </li>
 
             <Profile title="Profile" onClose={() => setShow(false)} show={show}>
             </Profile>
