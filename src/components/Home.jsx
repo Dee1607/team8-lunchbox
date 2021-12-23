@@ -26,7 +26,7 @@ export default function Home() {
                 Our team have supervised caterares at our service to prepare healthy food with a taste just as you like.
               </p>
               <button>
-                <a href="#footer_element">Read More</a>
+                <a href="/dummy">Read More</a>
               </button>
             </div>
             <div className="service yellow">
@@ -35,7 +35,7 @@ export default function Home() {
                 We bring food to your doorstep wrapped inside a lunchbox with love.
               </p>
               <button>
-                <a href="#footer_element">Read More</a>
+                <a href="/dummy">Read More</a>
               </button>
             </div>
             <div className="service">
@@ -44,7 +44,7 @@ export default function Home() {
                 We also provide premium home for nutricians's support, free deliveries and more offers.
               </p>
               <button>
-                <a href="#footer_element">Read More</a>
+                <a href="/dummy">Read More</a>
               </button>
             </div>
           </div>
@@ -100,8 +100,8 @@ padding: 5rem;
         }
       }
       a {
-        color: inherit; 
-        text-decoration: inherit; 
+        text-decoration: inherit;
+        color: inherit;
       }
     }
     .yellow {

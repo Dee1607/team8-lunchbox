@@ -1,17 +1,19 @@
 //Authors: Janvi Patel, Preetham Tikkavarapu
 
 import React, { useEffect } from "react";
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import scrollreveal from "scrollreveal";
+import Dummy from "./components/Dummy";
+import Feedback from "./components/Feedback";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Menu from './components/Menu';
-import Orders from './components/Orders';
 import MealPlanner from './components/MealPlanner';
 import Membership from './components/Membership';
+import Menu from './components/Menu';
 import Navbar from "./components/Navbar";
-import Feedback from "./components/Feedback";
+import Orders from './components/Orders';
 import ScrollToTop from "./components/ScrollToTop";
 import Testimonials from "./components/Testimonials";
-import scrollreveal from "scrollreveal";
 export default function App() {
   useEffect(() => {
     const sr = scrollreveal({
@@ -33,23 +35,37 @@ export default function App() {
     #feedback,
     .footer
     `,
-     { 
-        opacity: 0,
-       interval: 200,      
-    }    );  }, []); 
+    {
+      opacity: 0,
+      interval: 200,
+    } ); }, []);
 
-    return (    
-      <>
-        <ScrollToTop />
-        <Navbar />
-        <Home />
-        <Menu />
-        <Orders />
-        <MealPlanner />
-        <Membership />
-        <Testimonials />
-        <Feedback />
-        <Footer />  
-      </>
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <>
+              <ScrollToTop />
+              <Navbar />
+              <Home />
+              <Menu />
+              <Orders />
+              <MealPlanner />
+              <Membership />
+              <Testimonials />
+              <Feedback />
+              <Footer /> 
+            </>
+          </Route>
+          <Route path="/dummy">
+            <>
+              <ScrollToTop />
+              <Dummy />
+              <Footer /> 
+            </>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+      
     );
 }
