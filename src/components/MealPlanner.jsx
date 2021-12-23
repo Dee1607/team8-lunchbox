@@ -11,8 +11,6 @@ import {useState}  from "react";
 //  3. Choose from menu
 export default function MealPlanner() {
 
-  const [total, setTotal] = useState([]); 
-
   //Payment handler indicate if the successful payment then the success message
   const [visibilityStatus,setVisibilityStatus] = useState(false);
   const [showMessage, setShowMessage] = useState(false);

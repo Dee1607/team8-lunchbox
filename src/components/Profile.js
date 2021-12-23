@@ -1,5 +1,5 @@
 import "../css/Styles.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
 
@@ -10,6 +10,11 @@ const Profile = (props) => {
       props.onClose();
     }
   };
+
+  const [showMessage, setShowMessage] = useState(false);
+  const showMessageHandler = async () => {
+    setShowMessage("Subscription Cancelled");
+  }
 
   useEffect(() => {
     document.body.addEventListener("keydown", closeOnEscapeKeyDown);
@@ -38,6 +43,9 @@ const Profile = (props) => {
             <h3>Email:teyime9335@wolfpat.com</h3>
             <h3>Name:teyime</h3>
             <h3>subscription:Bronze</h3>
+            <button type="submit" className="button" onClick={() => {showMessageHandler()}}>Cancel Subscription</button>
+            <p style={{backgroundColor:"#cbffc0"} }>{showMessage}</p>
+
           </div>
           <div className="modal-footer">
             <button onClick={props.onClose} className="button">
