@@ -35,26 +35,26 @@ export default function App() {
     #feedback,
     .footer
     `,
-     { 
-        opacity: 0,
-       interval: 200,      
-    }    );  }, []); 
+    {
+      opacity: 0,
+      interval: 200,
+    } ); }, []);
 
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             <>
-              <ScrollToTop />
-              <Navbar />
-              <Home />
-              <Menu />
+              <ScrollToTop />
+              <Navbar />
+              <Home />
+              <Menu />
               <Orders />
               <MealPlanner />
               <Membership />
               <Testimonials />
               <Feedback />
-              <Footer />  
+              <Footer /> 
             </>
           </Route>
           <Route path="/dummy">
@@ -65,7 +65,7 @@ export default function App() {
             </>
           </Route>
         </Switch>
-      </BrowserRouter>    
+      </BrowserRouter>
       
     );
 }
